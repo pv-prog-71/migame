@@ -1,0 +1,1016 @@
+:root {
+    --teal:#006c70;
+    --turq:#58dce0;
+    --navy:#174e70;
+    --green:#42c83d;
+    --ink:#17191f;
+    --muted:#59636b;
+    --pale:#e8fbfa;
+    --line:#d9e7e8;
+    --yellow:#ffd02f;
+    --orange:#ffae16
+}
+
+* {
+    box-sizing:border-box
+}
+
+html {
+    scroll-behavior:smooth
+}
+
+body {
+    margin:0;
+    color:var(--ink);
+    background:#fff;
+    font:17px/1.55 Nunito,system-ui,sans-serif
+}
+
+a {
+    color:inherit
+}
+
+.wrap {
+    width:min(1120px,calc(100% - 36px));
+    margin:auto
+}
+
+header {
+    position:sticky;
+    top:0;
+    z-index:100;
+    background:rgba(255,255,255,.97);
+    border-bottom:2px solid var(--line);
+    box-shadow:0 2px 8px rgba(23,78,112,.06);
+    backdrop-filter:blur(10px)
+}
+
+.nav {
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px
+}
+
+.brand {
+    font-size:28px;
+    font-weight:1000;
+    letter-spacing:-1.5px;
+    color:var(--teal);
+    text-decoration:none
+}
+
+.brand span {
+    color:var(--navy)
+}
+
+.navright {
+    display:flex;
+    align-items:center;
+    gap:22px
+}
+
+.navlinks {
+    display:flex;
+    gap:20px
+}
+
+.navlinks a {
+    text-decoration:none;
+    font-weight:900;
+    font-size:14px
+}
+
+.navlinks a:hover {
+    color:var(--teal)
+}
+
+select {
+    font:800 14px Nunito,sans-serif;
+    padding:9px 11px;
+    border:2px solid var(--line);
+    border-radius:10px;
+    background:white;
+    color:var(--ink)
+}
+
+.hero {
+    padding:34px 0 42px;
+    overflow:hidden;
+    position:relative;
+    isolation:isolate
+}
+
+.headline {
+    text-align:center;
+    margin:0 auto 16px;
+    max-width:1050px
+}
+
+/* HERO TITLE — first line (PROGRAMMARE / PROGRAMAR / PROGRAMMING)
+   Adjust font-size to change its size. clamp(minimum, responsive size, maximum). */
+.pixel {
+    font-family:'Press Start 2P',monospace;
+    font-size:clamp(24px,5.7vw,62px);
+    line-height:1.48;
+    letter-spacing:-.065em;
+    color:var(--turq);
+    -webkit-text-stroke:1px var(--teal);
+    text-shadow:4px 4px 0 var(--teal),7px 7px 0 #d2f5f4;
+    overflow-wrap:anywhere
+}
+
+/* HERO TITLE — overlapping second line (È DIVERTENTE / ES DIVERTIDO / IS FUN)
+   Desktop overlap: make the first margin value more negative to move this line UP.
+   Change font-size to resize the second line. */
+.bubble {
+    position:relative;
+    z-index:2;
+    display:block;
+    margin:-40px 0 0 13%;
+    font-family:Nunito,system-ui,sans-serif;
+    font-weight:1000;
+    font-size:clamp(32px,5.5vw,61px);
+    line-height:1.05;
+    letter-spacing:-2px;
+    color:var(--turq);
+    -webkit-text-stroke:1px var(--navy);
+    text-shadow:3px 4px 0 var(--navy),5px 6px 0 #d2f5f4
+}
+
+.tagline {
+    font-size:clamp(17px,2.25vw,26px);
+    font-weight:800;
+    letter-spacing:.045em;
+    line-height:1.5;
+    text-align:center;
+    max-width:950px;
+    margin:26px auto 36px
+}
+
+.tagline strong {
+    font-weight:1000
+}
+
+.demo {
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);
+    gap:14px;
+    align-items:center;
+    max-width:930px;
+    margin:0 auto 30px
+}
+
+.asset {
+    display:block;
+    max-width:100%;
+    height:auto;
+    margin:auto;
+    object-fit:contain
+}
+
+.scratch {
+    width:min(260px,100%)
+}
+
+.arrow {
+    width:min(150px,100%)
+}
+
+.python {
+    width:min(220px,100%)
+}
+
+.gameWrap {
+    position:relative;
+    width:min(510px,92%);
+    margin:12px auto 0
+}
+
+.game {
+    width:100%;
+    height:auto;
+    display:block
+}
+
+.result {
+    position:absolute;
+    right:-8%;
+    bottom:4%;
+    width:43%;
+    min-height:68px;
+    display:grid;
+    place-items:center;
+    padding:13px 15px;
+    background:#d7ffd1;
+    border:6px solid var(--green);
+    border-radius:42% 48% 43% 48%;
+    color:var(--navy);
+    font-weight:1000;
+    font-size:clamp(15px,2vw,22px);
+    line-height:1.1;
+    text-align:center;
+    transform:rotate(-3deg);
+    text-shadow:1px 1px white
+}
+
+.heroPitch {
+    border-top:2px solid var(--ink);
+    margin:48px auto 0;
+    padding:20px 16px 0;
+    text-align:center;
+    font-size:clamp(18px,2.2vw,25px);
+    line-height:1.55
+}
+
+.heroPitch strong {
+    display:block
+}
+
+.contactQuick {
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:26px;
+    flex-wrap:wrap;
+    margin:20px auto 0
+}
+
+.qr {
+    width:84px;
+    height:84px;
+    object-fit:contain
+}
+
+.contactText {
+    display:flex;
+    align-items:center;
+    gap:16px
+}
+
+.waIcon {
+    width:54px;
+    height:54px;
+    display:grid;
+    place-items:center;
+    background:#25d366;
+    color:white;
+    border:4px solid white;
+    outline:2px solid #e4e9e9;
+    border-radius:50%;
+    font-size:30px;
+    font-weight:900;
+    box-shadow:0 3px 7px #0002
+}
+
+.contactText a {
+    text-decoration:none
+}
+
+.contactText .email {
+    color:#687077;
+    font-weight:900;
+    font-size:clamp(16px,2vw,21px)
+}
+
+.contactText .phone {
+    font-size:clamp(22px,3vw,30px);
+    font-weight:1000;
+    white-space:nowrap
+}
+
+.section {
+    padding:64px 0
+}
+
+.section.soft {
+    background:#f1fbfb
+}
+
+.head {
+    text-align:center;
+    max-width:760px;
+    margin:0 auto 30px
+}
+
+.kicker {
+    font-size:12px;
+    font-weight:1000;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--teal)
+}
+
+h2 {
+    font-size:clamp(28px,4vw,42px);
+    line-height:1.15;
+    margin:8px 0 12px;
+    letter-spacing:-1.2px
+}
+
+p {
+    margin:0 0 14px
+}
+
+.head p {
+    font-size:18px;
+    color:var(--muted)
+}
+
+.cards {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px
+}
+
+.card {
+    border:2px solid var(--line);
+    border-radius:18px;
+    padding:23px;
+    background:#fff
+}
+
+.ico {
+    font-size:28px
+}
+
+.card h3,.step h3 {
+    font-size:20px;
+    margin:8px 0
+}
+
+.card p,.step p {
+    color:var(--muted);
+    margin:0
+}
+
+.steps {
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px
+}
+
+.step {
+    padding:23px;
+    border-top:5px solid var(--turq);
+    background:#fff;
+    border-radius:0 0 16px 16px
+}
+
+.num {
+    font-family:'Press Start 2P',monospace;
+    color:var(--teal);
+    font-size:21px
+}
+
+.about {
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    gap:36px;
+    align-items:center
+}
+
+.quote {
+    font-size:clamp(24px,3vw,35px);
+    font-weight:1000;
+    line-height:1.25;
+    color:var(--navy);
+    border-left:7px solid var(--turq);
+    padding:8px 0 8px 24px
+}
+
+.about p {
+    color:var(--muted);
+    font-size:18px
+}
+
+.contact {
+    background:var(--navy);
+    color:white;
+    border-radius:22px;
+    padding:32px;
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:24px;
+    align-items:center
+}
+
+.contact .kicker {
+    color:#9df5ed
+}
+
+.contact p {
+    color:#e0f0f3;
+    max-width:600px
+}
+
+.actions {
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap
+}
+
+.btn {
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:13px 18px;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:1000;
+    transition:transform .15s
+}
+
+.btn:hover {
+    transform:translateY(-2px)
+}
+
+.whatsapp {
+    background:#25d366;
+    color:#073d27
+}
+
+.emailbtn {
+    background:white;
+    color:var(--navy)
+}
+
+footer {
+    border-top:2px solid var(--line);
+    padding:24px 0
+}
+
+.foot {
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+    color:var(--muted);
+    font-size:14px
+}
+
+.foot a {
+    text-decoration:none
+}
+
+.foot .brand {
+    font-size:24px
+}
+
+@media(max-width:720px) {
+    .nav {
+        padding:12px 0;
+        align-items:flex-start
+    }
+
+    .navright {
+        gap:10px
+    }
+
+    .navlinks {
+        display:none
+    }
+
+    .hero {
+        padding-top:27px
+    }
+
+    /* PHONE/TABLET TITLE: adjust font-size and the first margin value here. */
+    .bubble {
+        margin:-16px 0 0 3%;
+        font-size:clamp(29px,8vw,44px)
+    }
+
+    .tagline {
+        letter-spacing:0;
+        margin:22px auto
+    }
+
+    .demo {
+        grid-template-columns:minmax(0,1fr) 65px minmax(0,1fr);
+        gap:7px
+    }
+
+    .scratch {
+        width:100%
+    }
+
+    .arrow {
+        width:65px
+    }
+
+    .python {
+        width:100%
+    }
+
+    .gameWrap {
+        width:88%
+    }
+
+    .result {
+        right:-6%;
+        width:48%;
+        border-width:4px;
+        min-height:50px;
+        padding:8px
+    }
+
+    .heroPitch {
+        margin-top:34px;
+        padding-top:16px
+    }
+
+    .contactQuick {
+        gap:15px
+    }
+
+    .qr {
+        width:68px;
+        height:68px
+    }
+
+    .contactText {
+        gap:10px
+    }
+
+    .waIcon {
+        width:43px;
+        height:43px;
+        font-size:23px
+    }
+
+    .cards,.steps {
+        grid-template-columns:1fr
+    }
+
+    .about {
+        grid-template-columns:1fr;
+        gap:20px
+    }
+
+    .contact {
+        grid-template-columns:1fr;
+        padding:25px
+    }
+
+    .actions .btn {
+        width:100%
+    }
+
+    .section {
+        padding:48px 0
+    }
+
+}
+
+@media(max-width:390px) {
+    .brand {
+        font-size:24px
+    }
+
+    /* Smaller-screen override for the first title line. */
+    .pixel {
+        font-size:clamp(20px,6vw,25px)
+    }
+
+    .demo {
+        grid-template-columns:minmax(0,1fr) 42px minmax(0,1fr)
+    }
+
+    .arrow {
+        width:42px
+    }
+
+    .contactText .email {
+        font-size:14px
+    }
+
+    .contactText .phone {
+        font-size:20px
+    }
+
+}
+
+/* mi.Game flyer-inspired refinements */
+.cards.features {
+    grid-template-columns:repeat(4,minmax(0,1fr));
+    gap:14px
+}
+
+.features .card {
+    text-align:center;
+    padding:20px 16px;
+    border-radius:8px 8px 16px 16px;
+    border-top:5px solid var(--turq)
+}
+
+.featureIcon {
+    height:48px;
+    display:grid;
+    place-items:center;
+    font-size:30px;
+    font-weight:1000;
+    color:var(--teal);
+    font-family:'Press Start 2P',monospace
+}
+
+.features .card h3 {
+    font-size:18px
+}
+
+.features .card p {
+    font-size:15px
+}
+
+.contact {
+    grid-template-columns:1fr auto
+}
+
+.contactDetails {
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items:flex-end
+}
+
+.contactDetails a {
+    text-decoration:none
+}
+
+.contactDetails .email {
+    font-size:clamp(16px,2vw,21px);
+    font-weight:900;
+    color:#d5f8f5
+}
+
+.contactDetails .phone {
+    font-size:clamp(22px,3vw,30px);
+    font-weight:1000;
+    white-space:nowrap;
+    color:#fff
+}
+
+.whatsapp-float {
+    position:fixed;
+    right:24px;
+    bottom:22px;
+    z-index:110;
+    width:64px;
+    height:64px;
+    display:grid;
+    place-items:center;
+    padding:0;
+    border-radius:50%;
+    background:#25d366;
+    color:#fff;
+    box-shadow:0 3px 8px #0002;
+    transition:transform .18s ease
+}
+
+.whatsapp-float:hover {
+    transform:translateY(-3px) scale(1.04)
+}
+
+.whatsapp-float svg {
+    display:block;
+    width:100%;
+    height:100%;
+    fill:currentColor
+}
+
+.brand span {
+    color:var(--navy)
+}
+
+.foot {
+    gap:18px
+}
+
+@media(max-width:900px) {
+    .cards.features {
+        grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+
+}
+
+@media(max-width:720px) {
+    .cards.features {
+        grid-template-columns:repeat(2,minmax(0,1fr))
+    }
+
+    .contact {
+        grid-template-columns:1fr
+    }
+
+    .contactDetails {
+        align-items:flex-start
+    }
+
+    .whatsapp-float {
+        width:58px;
+        height:58px;
+        padding:0;
+        right:14px;
+        bottom:14px
+    }
+
+}
+
+@media(max-width:390px) {
+    .cards.features {
+        grid-template-columns:1fr
+    }
+
+    .whatsapp-float {
+        width:54px;
+        height:54px;
+        padding:0;
+        right:10px;
+        bottom:10px
+    }
+
+}
+
+/* Fixes: restore brand contrast and make mobile navigation usable */
+.brand span {
+    color:var(--navy)
+}
+
+.mobile-menu-toggle {
+    display:none;
+    align-items:center;
+    justify-content:center;
+    width:42px;
+    height:42px;
+    padding:0;
+    border:2px solid var(--line);
+    border-radius:10px;
+    background:#fff;
+    color:var(--teal);
+    cursor:pointer
+}
+
+.mobile-menu-toggle svg {
+    display:block
+}
+
+.whatsapp-float img {
+    width:82%;
+    height:82%;
+    display:block;
+    object-fit:contain
+}
+
+.whatsapp-float .wa-fallback {
+    display:none;
+    width:76%;
+    height:76%;
+    fill:#fff
+}
+
+@media(max-width:720px) {
+    .nav {
+        position:relative;
+        padding:10px 0;
+        align-items:center
+    }
+
+    .navright {
+        gap:9px;
+        align-items:center
+    }
+
+    .mobile-menu-toggle {
+        display:inline-flex;
+        flex:0 0 auto
+    }
+
+    .navlinks {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        z-index:120;
+        flex-direction:column;
+        gap:0;
+        padding:8px 16px;
+        background:#fff;
+        border:2px solid var(--line);
+        border-radius:0 0 14px 14px;
+        box-shadow:0 8px 18px #174e7020
+    }
+
+    .navlinks.is-open {
+        display:flex
+    }
+
+    .navlinks a {
+        font-size:16px;
+        padding:12px 4px;
+        border-bottom:1px solid var(--line)
+    }
+
+    .navlinks a:last-child {
+        border-bottom:0
+    }
+
+}
+
+/* Final header, wordmark and supplied WhatsApp artwork */
+.brand {
+    color: #006c70 !important;
+}
+
+.brand span {
+    color: #174e70 !important;
+    -webkit-text-stroke: 0;
+}
+
+.mobile-menu-toggle {
+    display: none;
+}
+
+.mobile-menu-toggle .menu-label {
+    font: 800 13px/1 Nunito,system-ui,sans-serif;
+}
+
+.whatsapp-float {
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible;
+}
+
+.whatsapp-float img {
+    display: block;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain;
+}
+
+.whatsapp-float .wa-fallback {
+    display: none;
+}
+
+@media (max-width:720px) {
+    .nav {
+        position: relative;
+        min-height: 60px;
+        padding: 8px 0;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .brand {
+        flex: 0 1 auto;
+        font-size: 24px;
+        white-space: nowrap;
+    }
+
+    .navright {
+        display:flex;
+        flex:0 0 auto;
+        margin-left:auto;
+        align-items:center;
+        gap:8px;
+    }
+
+    .mobile-menu-toggle {
+        display:inline-flex !important;
+        flex:0 0 auto;
+        align-items:center;
+        justify-content:center;
+        gap:6px;
+        width:auto;
+        min-width:78px;
+        height:40px;
+        padding:0 9px;
+        border:2px solid #006c70;
+        border-radius:9px;
+        background:#fff;
+        color:#006c70;
+        cursor:pointer;
+    }
+
+    .mobile-menu-toggle svg {
+        display:block;
+        flex:0 0 20px;
+        width:20px;
+        height:20px;
+    }
+
+    .navlinks {
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        z-index:120;
+        flex-direction:column;
+        gap:0;
+        padding:8px 14px;
+        background:#fff;
+        border:2px solid #d9e7e8;
+        border-radius:0 0 12px 12px;
+        box-shadow:0 8px 18px rgba(23,78,112,.16);
+    }
+
+    .navlinks.is-open {
+        display:flex !important;
+    }
+
+    .navlinks a {
+        display:block;
+        padding:12px 4px;
+        border-bottom:1px solid #d9e7e8;
+        font-size:16px;
+    }
+
+    .navlinks a:last-child {
+        border-bottom:0;
+    }
+
+    #lang {
+        max-width:105px;
+        font-size:12px;
+        padding:8px 5px;
+    }
+
+    .whatsapp-float {
+        width:56px !important;
+        height:56px !important;
+        right:12px !important;
+        bottom:12px !important;
+    }
+
+}
+
+@media (max-width:390px) {
+    .brand {
+        font-size:22px;
+    }
+
+    .mobile-menu-toggle {
+        min-width:72px;
+        padding:0 7px;
+        gap:4px;
+    }
+
+    #lang {
+        max-width:90px;
+        font-size:11px;
+    }
+
+    .whatsapp-float {
+        width:52px !important;
+        height:52px !important;
+        right:10px !important;
+        bottom:10px !important;
+    }
+
+}
+
+/* Three learning cards and consistent line-art icons */
+.lesson-cards {
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:18px
+}
+
+.lesson-cards .card {
+    text-align:center;
+    padding:26px 22px;
+    border-top:5px solid var(--turq);
+    border-radius:8px 8px 16px 16px
+}
+
+.lessonIcon {
+    height:56px;
+    display:grid;
+    place-items:center;
+    color:var(--teal);
+    margin:0 auto 8px
+}
+
+.lessonIcon svg {
+    width:42px;
+    height:42px;
+    fill:none;
+    stroke:currentColor;
+    stroke-width:1.7;
+    stroke-linecap:round;
+    stroke-linejoin:round
+}
+
+@media(max-width:720px) {
+    .lesson-cards {
+        grid-template-columns:1fr
+    }
+
+    .lesson-cards .card {
+        padding:22px
+    }
+
+}
