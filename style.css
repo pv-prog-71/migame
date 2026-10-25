@@ -128,7 +128,7 @@ select {
     position:relative;
     z-index:2;
     display:block;
-    margin:-40px 0 0 13%;
+    margin:-20px 0 0 13%;
     font-family:Nunito,system-ui,sans-serif;
     font-weight:1000;
     font-size:clamp(32px,5.5vw,61px);
