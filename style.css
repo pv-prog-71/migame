@@ -1097,19 +1097,11 @@ footer {
 }
 
 
-/* mi.Game brand update — supplied terracotta/chestnut logo */
-:root {
-  --teal: #C94732;
-  --turq: #D85A40;
-  --navy: #593522;
-  --pale: #F8EDE7;
-  --line: #E8D7CE;
-}
+/* mi.Game wordmark: use supplied logo artwork without changing the site's color palette */
 .brand {
   display: inline-flex;
   align-items: center;
   flex: 0 1 auto;
-  color: #C94732 !important;
   text-decoration: none;
   line-height: 1;
 }
@@ -1120,14 +1112,12 @@ footer {
   height: auto;
   object-fit: contain;
 }
-.brand span { color: #593522 !important; }
 @media (max-width: 720px) {
   .brand img { width: clamp(145px, 35vw, 205px); }
 }
 @media (max-width: 390px) {
   .brand img { width: clamp(125px, 34vw, 155px); }
 }
-
 @media (min-width: 721px) {
   .foot .brand img { width: 170px; }
 }
