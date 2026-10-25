@@ -1097,7 +1097,7 @@ footer {
 }
 
 
-/* mi.Game wordmark: use supplied logo artwork without changing the site's color palette */
+/* Logo mi.Game fornito dall'utente: nessuna modifica alla palette generale del sito */
 .brand {
   display: inline-flex;
   align-items: center;
