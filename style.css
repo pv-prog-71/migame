@@ -1095,3 +1095,42 @@ footer {
   max-width: 30px !important;
   max-height: 30px !important;
 }
+
+
+/* mi.Game brand update — supplied terracotta/chestnut logo */
+:root {
+  --teal: #C94732;
+  --turq: #D85A40;
+  --navy: #593522;
+  --pale: #F8EDE7;
+  --line: #E8D7CE;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  flex: 0 1 auto;
+  color: #C94732 !important;
+  text-decoration: none;
+  line-height: 1;
+}
+.brand img {
+  display: block;
+  width: clamp(190px, 23vw, 285px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.brand span { color: #593522 !important; }
+@media (max-width: 720px) {
+  .brand img { width: clamp(145px, 35vw, 205px); }
+}
+@media (max-width: 390px) {
+  .brand img { width: clamp(125px, 34vw, 155px); }
+}
+
+@media (min-width: 721px) {
+  .foot .brand img { width: 170px; }
+}
+@media (max-width: 720px) {
+  .foot .brand img { width: 145px; }
+}
