@@ -1124,3 +1124,22 @@ footer {
 @media (max-width: 720px) {
   .foot .brand img { width: 145px; }
 }
+
+
+/* Uniforma le prime tre icone delle lezioni alle icone lineari della sezione successiva */
+.lesson-cards .lessonIcon svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+/* Stella di prova: centrata e simmetrica, senza effetto inclinato */
+.features .featureIcon svg.featureStar {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+  stroke: none;
+}
