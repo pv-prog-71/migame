@@ -4,8 +4,9 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="mi.Game: lezioni individuali online di programmazione per bambini, in italiano, spagnolo e inglese.">
-  <meta name="theme-color" content="#006c70">
+  <meta name="theme-color" content="#0c2f45">
   <link rel="icon" type="image/png" href="assets/img/favicon.png" sizes="32x32">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <title>mi.Game — Programmare è divertente!</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +134,18 @@
       .features { grid-template-columns: minmax(0, 1fr); }
       .hero-cta .btn { width: 100%; }
     }
+
+    /* night-sky opening (v1.2) */
+    .hero { background-color: var(--navy); background-image: var(--sparkles); background-size: 240px 240px; color: #fff; }
+    .hero .band-in { padding-top: 46px; }
+    .pixel { text-shadow: 4px 4px 0 var(--teal), 7px 7px 0 #0a2a3d; }
+    .bubble { -webkit-text-stroke: 1px #0a2a3d; text-shadow: 3px 4px 0 #0a2a3d, 5px 6px 0 rgba(88,220,224,.3); }
+    .tagline strong { color: var(--yellow); background: none; }
+    .heroPitch { color: #e6f7f8; }
+    .python { box-shadow: 0 8px 20px rgba(0,0,0,.45); }
+    .game { filter: drop-shadow(0 10px 14px rgba(0,0,0,.45)); }
+    .hero .btn { box-shadow: 0 5px 0 #0a2a3d; border-color: #0a2a3d; }
+
   </style>
 </head>
 <body>
@@ -161,7 +174,7 @@
       </div>
     </section>
 
-    <div class="pixel-edge" style="--edge: var(--turq); background-color: var(--sky)"></div>
+    <div class="pixel-edge" style="--edge: var(--turq); background-color: var(--navy)"></div>
     <section class="band b-lessons" id="lezioni">
       <div class="wrap band-in">
         <div class="head"><span class="kicker" data-t="k1"></span><h2 data-t="h1"></h2><p data-t="intro"></p></div>

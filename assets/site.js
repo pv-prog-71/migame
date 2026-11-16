@@ -17,7 +17,7 @@
   var SHOW_LEARN = true;
 
   /* Site version: shown in the footer. Keep it equal to the VERSION file. */
-  var VERSION = "1.1";
+  var VERSION = "1.2";
 
   var NAV = {
     it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni online individuali di programmazione per bambini." },
@@ -55,18 +55,20 @@
     var a = function (hash) { return onHome ? "#" + hash : home + "#" + hash; };
     el.className = "site-head";
     el.innerHTML = '<div class="wrap">' +
-      '<a class="logo" href="' + (onHome ? "#" : home) + '"><img src="' + r + 'assets/img/logo.png" alt="mi.Game" width="160" height="46"></a>' +
+      '<a class="logo" href="' + (onHome ? "#" : home) + '"><img src="' + r + 'assets/img/logo-light.png" alt="mi.Game" width="150" height="43"></a>' +
       '<nav class="nav" id="site-nav" aria-label="mi.Game">' +
       '<a href="' + a("lezioni") + '" data-sec="lezioni">' + esc(n.lessons) + "</a>" +
       '<a href="' + a("metodo") + '" data-sec="metodo">' + esc(n.how) + "</a>" +
       (SHOW_LEARN ? '<a href="' + r + 'learn/index.html" data-sec="gioca"' + (opts.active === "learn" ? ' aria-current="page"' : "") + ">" + esc(n.play) + "</a>" : "") +
       '<a href="' + a("contatti") + '" data-sec="contatti">' + esc(n.contact) + "</a>" +
+      (opts.noLang ? "" : '<label class="nav-lang"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg>' +
+        '<select class="lang-select" aria-label="' + esc(n.lang) + '">' +
+        [["it", "Italiano"], ["es", "Español"], ["en", "English"]].map(function (l) { return '<option value="' + l[0] + '"' + (lang === l[0] ? " selected" : "") + ">" + l[1] + "</option>"; }).join("") +
+        "</select></label>") +
       "</nav>" +
-      '<div class="head-right">' +
+      '<div class="head-right">' + (opts.extra || "") +
       '<button type="button" class="menu-toggle" aria-controls="site-nav" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg><span class="menu-label">' + esc(n.menu) + "</span></button>" +
-      (opts.noLang ? "" : '<select class="lang-select" aria-label="' + esc(n.lang) + '">' +
-      [["it", "Italiano"], ["es", "Español"], ["en", "English"]].map(function (l) { return '<option value="' + l[0] + '"' + (lang === l[0] ? " selected" : "") + ">" + l[1] + "</option>"; }).join("") +
-      "</select>") + (opts.extra || "") + "</div></div>";
+      "</div></div>";
     var sel = el.querySelector(".lang-select");
     if (sel) sel.addEventListener("change", function (e) { setLang(e.target.value); });
     var nav = el.querySelector(".nav"), tog = el.querySelector(".menu-toggle");
@@ -78,8 +80,9 @@
     opts = opts || {};
     var r = opts.root || "", n = NAV[lang], home = r + "index.html";
     el.className = "site-foot";
-    el.innerHTML = '<div class="wrap"><a class="logo" href="' + home + '"><img src="' + r + 'assets/img/logo.png" alt="mi.Game" width="130" height="38"></a>' +
-      "<span>" + esc(n.foot) + '</span><small class="ver">v' + VERSION + "</small></div>";
+    el.innerHTML = '<div class="wrap"><a class="logo" href="' + home + '"><img src="' + r + 'assets/img/logo-light.png" alt="mi.Game" width="130" height="38"></a>' +
+      "<span>" + esc(n.foot) + "</span></div>";
+    el.setAttribute("data-version", VERSION);
   }
 
   function setLang(l) {

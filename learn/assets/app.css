@@ -407,3 +407,9 @@ body { background-color: var(--sky); background-image: var(--sparkles); backgrou
 .teacher-link { align-self: center; font-size: var(--s-sm); color: var(--muted); }
 body { display: flex; flex-direction: column; min-height: 100vh; }
 body > main { flex: 1 0 auto; width: 100%; }
+
+/* header extras on the dark header (v1.2) */
+.site-head .avatar { background: transparent; border: 0; width: 44px; height: 44px; }
+.site-head .avatar svg { width: 40px; height: 40px; }
+.site-head .chip-xp { border-color: #0a2a3d; }
+main { padding-top: 34px; }
