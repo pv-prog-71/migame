@@ -202,3 +202,7 @@ section[id] { scroll-margin-top: 90px; }
 .site-foot .wrap { padding-block: 16px calc(18px + env(safe-area-inset-bottom, 0px)); gap: 4px; font-size: .9rem; }
 .site-foot .logo img { width: 100px; }
 @media (max-width: 860px) { .site-foot .wrap { padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px)); } }
+
+/* v1.8 "Play & learn" is the novelty: always yellow in the menu, like on the home */
+.nav a[data-sec="gioca"], .nav a[data-sec="gioca"]:hover, .nav a[data-sec="gioca"][aria-current] { color: var(--yellow); }
+.nav a[data-sec="gioca"][aria-current]::after { background: var(--yellow); }
