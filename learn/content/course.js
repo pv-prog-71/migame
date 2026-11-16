@@ -1,9 +1,11 @@
 /* COURSE MAP
-   - Three worlds, each with an ordered list of levels (modules).
-   - A level with `soon: true` is shown on the map as "Coming soon".
-     While a world has "soon" levels it can't be completed, so the next world stays locked
+   - Three levels (Explorer, Apprentice, Inventor), each with an ordered list of missions.
+   - A mission with `soon: true` is shown on the map as "Coming soon".
+     While a level has "soon" missions it can't be completed, so the next level stays locked
      (the level test can still unlock it).
-   - Any other level is loaded from content/<id>.js
+   - Every completed mission adds a part to the player's robot (1st: tracks, 2nd: arms,
+     3rd: antenna, 4th: rockets, 5th: visor, 6th: helmet; bronze / silver / gold by level).
+   - Any other mission is loaded from content/<id>.js
    - Texts: T("english", "español", "italiano") */
 (function () {
   var T = function (en, es, it) { return { en: en, es: es, it: it }; };
@@ -16,7 +18,7 @@
         id: "explorer",
         name: T("Explorer", "Explorador", "Esploratore"),
         blurb: T("Guide Bit with blocks: sequences, loops, conditions.", "Guía a Bit con bloques: secuencias, bucles, condiciones.", "Guida Bit con i blocchi: sequenze, cicli, condizioni."),
-        badge: { glyph: "compass", name: T("Explorer", "Explorador", "Esploratore"), desc: T("Finish world 1", "Termina el mundo 1", "Completa il mondo 1") },
+        badge: { glyph: "compass", name: T("Explorer", "Explorador", "Esploratore"), desc: T("Complete the Explorer level", "Completa el nivel Explorador", "Completa il livello Esploratore") },
         modules: [
           { id: "exp-sequences" },
           { id: "exp-loops" },
@@ -28,10 +30,10 @@
         id: "apprentice",
         name: T("Apprentice", "Aprendiz", "Apprendista"),
         blurb: T("From blocks to written code: types, functions, lists.", "De los bloques al código escrito: tipos, funciones, listas.", "Dai blocchi al codice scritto: tipi, funzioni, liste."),
-        badge: { glyph: "key", name: T("Apprentice", "Aprendiz", "Apprendista"), desc: T("Finish world 2", "Termina el mundo 2", "Completa il mondo 2") },
+        badge: { glyph: "key", name: T("Apprentice", "Aprendiz", "Apprendista"), desc: T("Complete the Apprentice level", "Completa el nivel Aprendiz", "Completa il livello Apprendista") },
         modules: [
-          { id: "app-types", soon: true, title: T("Variables and types", "Variables y tipos", "Variabili e tipi") },
-          { id: "app-functions", soon: true, title: T("Functions", "Funciones", "Funzioni") },
+          { id: "app-types" },
+          { id: "app-functions" },
           { id: "app-scope", soon: true, title: T("Local and global", "Local y global", "Locale e globale") },
           { id: "app-lists", soon: true, title: T("Lists", "Listas", "Liste") }
         ]
@@ -40,7 +42,7 @@
         id: "inventor",
         name: T("Inventor", "Inventor", "Inventore"),
         blurb: T("Think in objects: classes, inheritance, interfaces.", "Piensa en objetos: clases, herencia, interfaces.", "Pensa a oggetti: classi, ereditarietà, interfacce."),
-        badge: { glyph: "crown", name: T("Inventor", "Inventor", "Inventore"), desc: T("Finish world 3", "Termina el mundo 3", "Completa il mondo 3") },
+        badge: { glyph: "crown", name: T("Inventor", "Inventor", "Inventore"), desc: T("Complete the Inventor level", "Completa el nivel Inventor", "Completa il livello Inventore") },
         modules: [
           { id: "inv-classes" },
           { id: "inv-inheritance" },

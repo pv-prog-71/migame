@@ -21,124 +21,121 @@
   /* ---------- interface text (3 languages) ---------- */
   var UI = {
     en: {
-      demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "**→ Dog 1** means: this variable points to the object *Dog 1* (same colour).", worldN: "World {n}", nextCard: "Next card", lockedWorld: "Finish {w} to unlock this world, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Completed",
+      missionN: "Mission {n}", newPart: "New part for your robot", parts: "Robot parts", partsHow: "Every mission you complete adds a part to your robot.", partFrom: "{l} · mission {n}", medalsHow: "Medals give you extra experience.", xpExp: "Experience", nextTitle: "Next mission", demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "**→ Dog 1** means: this variable points to the object *Dog 1* (same colour).", worldN: "Level {n}", nextCard: "Next step", lockedWorld: "Finish {w} to unlock this level, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Missions",
       yourRobot: "Your robot", memStart: "Ready! The program hasn't started yet. Press **Next line ▶** to run the first line.", memNext: "Next line", memMain: "Program", memTemp: "temporary: they disappear at the end", memNoVars: "no variables yet", memOut: "What the program prints",
-      starsText: "{n} of 3 stars", starsHow: "1 star: finish the level. 2 stars: without using “Show the answer”. 3 stars: challenge with no mistakes and no hints.", placeUnlocked: "Unlocked worlds",
+      starsText: "{n} of 3 stars", starsHow: "1 star: finish the mission. 2 stars: without using “Show the answer”. 3 stars: beat the boss with no mistakes and no hints.", placeUnlocked: "Unlocked levels",
       run: "Run ▶", play: "Play", clear: "Clear", blocksLabel: "Blocks: tap to add", dropMain: "Tap a block above to start", dropInside: "Tap a block to put it inside", addHere: "New blocks go here",
       addBlocks: "Add some blocks first.", w_move: "move forward", w_turnLeft: "turn left", w_turnRight: "turn right", w_repeat: "repeat {n} times", words: "Words",
       res_wall: "Ouch! Bit bumped into a wall.", res_noflag: "Bit stopped before the flag.", res_stars: "Bit reached the flag but missed some stars.",
       tooMany: "Bit made it! Now do it with at most {n} blocks.", maxBlocks: "max {n} blocks", blocksCount: "{a} blocks", demoOk: "Bit made it!", kind_grid: "Program Bit",
       tagline: "learn", heroHi: "Hi, {name}!", heroWelcome: "Ready to play?",
-      heroText: "Learn to code one step at a time. Earn XP and badges along the way.",
-      continue: "Continue", start: "Start", placementBtn: "Find my level", placementRetake: "Retake the level quiz",
-      level: "Level", xpToNext: "{n} XP to level {l}", stageLocked: "Locked", stageOpen: "Open", stageDone: "Complete",
+      heroText: "Learn to code one step at a time. Complete missions, upgrade your robot and gain experience.",
+      continue: "Continue", start: "Start", placementBtn: "Find your level", placementRetake: "Retake the level test",
+      stageLocked: "Locked", stageOpen: "Open", stageDone: "Complete",
       soon: "Coming soon", locked: "Locked", done: "Done", inProgress: "{p}% done", notStarted: "Not started",
-      learn: "Learn", quiz: "Quiz", practice: "Practice", challenge: "Challenge",
+      learn: "Learn", quiz: "Quiz", practice: "Practice", challenge: "Boss",
       back: "← Map", check: "Check", next: "Next", prev: "Back", hint: "Hint", showAnswer: "Show the answer",
       correct: "Correct!", wrong: "Not yet. Look again and try once more.", chooseFirst: "Pick an answer first.",
       fillFirst: "Fill in every blank first.", revealed: "Here is the answer.", alreadySolved: "Already solved. You can try it again for practice.",
-      goQuiz: "Start the quiz", goPractice: "Go to practice", goChallenge: "Take the challenge", finishModule: "Finish module",
+      goQuiz: "Start the quiz", goPractice: "Go to practice", goChallenge: "Face the boss", finishModule: "Finish the mission",
       sectionDone: "Section complete", sectionDoneText: "Nice work. On to the next part.",
-      modDoneTitle: "Module complete!", modDoneText: "You earned the badge {b} and {x} bonus XP.",
-      nextModule: "Next module", backMap: "Back to the map",
+      modDoneTitle: "Mission complete!", modDoneText: "New part for your robot: {b}. +{x} XP.",
+      nextModule: "Next mission", backMap: "Back to the map",
       kind_choice: "Choose", kind_predict: "Predict the output", kind_order: "Put in order", kind_fill: "Fill the blanks",
       kind_bug: "Find the bug", kind_trace: "Trace the values", kind_match: "Match",
       typeOutput: "Type exactly what the program prints…", yourProgram: "Your program", pieces: "Pieces (tap to move)",
       tapToAdd: "Tap the pieces below in the right order.", empty: "Nothing here", choose: "Choose…",
-      variables: "Variables", objects: "Objects", noObjects: "No objects yet", step: "Step {i} of {n}", restart: "Restart", stepFwd: "Run line",
+      variables: "Variables", objects: "Objects", noObjects: "No objects yet", step: "{i} / {n}", restart: "Restart", stepFwd: "Run line",
       profile: "My profile", nickname: "Nickname", nicknameHelp: "Just a nickname. No email or real name needed.",
       color: "Colour", language: "Language", save: "Save", saved: "Saved",
-      badges: "Badges", history: "History", noHistory: "Your achievements will show up here.",
-      statsXp: "XP", statsLevel: "Level", statsModules: "Modules",
+      badges: "Medals", history: "History", noHistory: "Your achievements will show up here.",
+      statsXp: "Experience", statsModules: "Missions",
       resetTitle: "Start over", resetText: "Deletes all progress in this browser.", resetBtn: "Delete my progress",
       resetSure: "This can't be undone. Delete everything?", resetYes: "Yes, delete", cancel: "Cancel",
       placeTitle: "Find your level", placeIntro: "Eight short questions. No pressure: it only tells you where to start. Skip any you don't know.",
       placeSubmit: "See my result", placeScore: "correct answers", placeStart: "Start here", placeRec: "We suggest you start with",
-      placeSoon: "Lessons for this stage are being prepared. Meanwhile you can explore the stages that are already open.",
+      placeSoon: "The missions of this level are being prepared. Meanwhile you can play the levels that are already open.",
       placeDontKnow: "I don't know",
-      newBadge: "New badge", levelUp: "Level up!", levelUpText: "You reached level {l}",
-      footer: "Your progress stays in this browser.", site: "mi.Game lessons",
-      modulesCount: "{n} modules", ofTotal: "{a} of {b}"
+      newBadge: "New medal", footer: "Your progress stays in this browser.", site: "mi.Game lessons",
+      modulesCount: "{n} missions", ofTotal: "{a} of {b}"
     },
     es: {
-      demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "**→ Dog 1** significa: esta variable apunta al objeto *Dog 1* (mismo color).", worldN: "Mundo {n}", nextCard: "Siguiente ficha", lockedWorld: "Termina {w} para desbloquear este mundo, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Completados",
+      missionN: "Misión {n}", newPart: "Pieza nueva para tu robot", parts: "Piezas del robot", partsHow: "Cada misión que completas añade una pieza a tu robot.", partFrom: "{l} · misión {n}", medalsHow: "Las medallas te dan experiencia extra.", xpExp: "Experiencia", nextTitle: "Próxima misión", demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "**→ Dog 1** significa: esta variable apunta al objeto *Dog 1* (mismo color).", worldN: "Nivel {n}", nextCard: "Siguiente paso", lockedWorld: "Termina {w} para desbloquear este nivel, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Misiones",
       yourRobot: "Tu robot", memStart: "¡Listo! El programa todavía no ha empezado. Pulsa **Siguiente línea ▶** para ejecutar la primera línea.", memNext: "Siguiente línea", memMain: "Programa", memTemp: "temporales: desaparecen al final", memNoVars: "aún no hay variables", memOut: "Lo que imprime el programa",
-      starsText: "{n} de 3 estrellas", starsHow: "1 estrella: termina el nivel. 2 estrellas: sin usar “Ver la respuesta”. 3 estrellas: desafío sin errores ni pistas.", placeUnlocked: "Mundos desbloqueados",
+      starsText: "{n} de 3 estrellas", starsHow: "1 estrella: terminas la misión. 2 estrellas: sin usar “Ver la respuesta”. 3 estrellas: vences al jefe sin errores ni pistas.", placeUnlocked: "Niveles desbloqueados",
       run: "Ejecutar ▶", play: "Reproducir", clear: "Borrar todo", blocksLabel: "Bloques: toca para añadir", dropMain: "Toca un bloque de arriba para empezar", dropInside: "Toca un bloque para meterlo dentro", addHere: "Los bloques nuevos van aquí",
       addBlocks: "Primero añade algunos bloques.", w_move: "avanzar", w_turnLeft: "girar a la izquierda", w_turnRight: "girar a la derecha", w_repeat: "repetir {n} veces", words: "Palabras",
       res_wall: "¡Ay! Bit se ha chocado con una pared.", res_noflag: "Bit se ha parado antes de la bandera.", res_stars: "Bit llegó a la bandera, pero le faltan estrellas.",
       tooMany: "¡Bit lo logró! Ahora hazlo con {n} bloques como máximo.", maxBlocks: "máx. {n} bloques", blocksCount: "{a} bloques", demoOk: "¡Bit lo consiguió!", kind_grid: "Programa a Bit",
       tagline: "aprende", heroHi: "¡Hola, {name}!", heroWelcome: "¿Listo para jugar?",
-      heroText: "Aprende a programar paso a paso. Gana XP e insignias por el camino.",
+      heroText: "Aprende a programar paso a paso. Completa misiones, mejora tu robot y gana experiencia.",
       continue: "Continuar", start: "Empezar", placementBtn: "Descubre tu nivel", placementRetake: "Repetir el test de nivel",
-      level: "Nivel", xpToNext: "{n} XP para el nivel {l}", stageLocked: "Bloqueada", stageOpen: "Abierta", stageDone: "Completada",
+      stageLocked: "Bloqueada", stageOpen: "Abierta", stageDone: "Completada",
       soon: "Próximamente", locked: "Bloqueado", done: "Hecho", inProgress: "{p}% hecho", notStarted: "Sin empezar",
-      learn: "Aprende", quiz: "Quiz", practice: "Práctica", challenge: "Desafío",
+      learn: "Aprende", quiz: "Quiz", practice: "Práctica", challenge: "Jefe",
       back: "← Mapa", check: "Comprobar", next: "Siguiente", prev: "Atrás", hint: "Pista", showAnswer: "Ver la respuesta",
       correct: "¡Correcto!", wrong: "Todavía no. Míralo otra vez e inténtalo de nuevo.", chooseFirst: "Primero elige una respuesta.",
       fillFirst: "Primero rellena todos los huecos.", revealed: "Esta es la respuesta.", alreadySolved: "Ya resuelto. Puedes repetirlo para practicar.",
-      goQuiz: "Empezar el quiz", goPractice: "Ir a la práctica", goChallenge: "Afrontar el desafío", finishModule: "Terminar módulo",
+      goQuiz: "Empezar el quiz", goPractice: "Ir a la práctica", goChallenge: "Enfréntate al jefe", finishModule: "Terminar la misión",
       sectionDone: "Sección completada", sectionDoneText: "Buen trabajo. Vamos a la siguiente parte.",
-      modDoneTitle: "¡Módulo completado!", modDoneText: "Has ganado la insignia {b} y {x} XP extra.",
-      nextModule: "Siguiente módulo", backMap: "Volver al mapa",
+      modDoneTitle: "¡Misión cumplida!", modDoneText: "Pieza nueva para tu robot: {b}. +{x} XP.",
+      nextModule: "Siguiente misión", backMap: "Volver al mapa",
       kind_choice: "Elige", kind_predict: "Adivina la salida", kind_order: "Ordena", kind_fill: "Rellena los huecos",
       kind_bug: "Encuentra el error", kind_trace: "Sigue los valores", kind_match: "Relaciona",
       typeOutput: "Escribe exactamente lo que imprime el programa…", yourProgram: "Tu programa", pieces: "Piezas (toca para mover)",
       tapToAdd: "Toca las piezas de abajo en el orden correcto.", empty: "Vacío", choose: "Elige…",
-      variables: "Variables", objects: "Objetos", noObjects: "Aún no hay objetos", step: "Paso {i} de {n}", restart: "Reiniciar", stepFwd: "Ejecutar línea",
+      variables: "Variables", objects: "Objetos", noObjects: "Aún no hay objetos", step: "{i} / {n}", restart: "Reiniciar", stepFwd: "Ejecutar línea",
       profile: "Mi perfil", nickname: "Apodo", nicknameHelp: "Solo un apodo. No hace falta email ni nombre real.",
       color: "Color", language: "Idioma", save: "Guardar", saved: "Guardado",
-      badges: "Insignias", history: "Historial", noHistory: "Aquí aparecerán tus logros.",
-      statsXp: "XP", statsLevel: "Nivel", statsModules: "Módulos",
+      badges: "Medallas", history: "Historial", noHistory: "Aquí aparecerán tus logros.",
+      statsXp: "Experiencia", statsModules: "Misiones",
       resetTitle: "Empezar de cero", resetText: "Borra todo el progreso de este navegador.", resetBtn: "Borrar mi progreso",
       resetSure: "No se puede deshacer. ¿Borrar todo?", resetYes: "Sí, borrar", cancel: "Cancelar",
       placeTitle: "Descubre tu nivel", placeIntro: "Ocho preguntas cortas. Sin presión: solo sirve para saber por dónde empezar. Salta las que no sepas.",
       placeSubmit: "Ver mi resultado", placeScore: "respuestas correctas", placeStart: "Empezar aquí", placeRec: "Te sugerimos empezar por",
-      placeSoon: "Las lecciones de esta etapa se están preparando. Mientras tanto puedes explorar las etapas ya abiertas.",
+      placeSoon: "Las misiones de este nivel se están preparando. Mientras tanto puedes jugar los niveles ya abiertos.",
       placeDontKnow: "No lo sé",
-      newBadge: "Nueva insignia", levelUp: "¡Subes de nivel!", levelUpText: "Has llegado al nivel {l}",
-      footer: "Tu progreso se queda en este navegador.", site: "Clases de mi.Game",
-      modulesCount: "{n} módulos", ofTotal: "{a} de {b}"
+      newBadge: "Nueva medalla", footer: "Tu progreso se queda en este navegador.", site: "Clases de mi.Game",
+      modulesCount: "{n} misiones", ofTotal: "{a} de {b}"
     },
     it: {
-      demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "**→ Dog 1** vuol dire: questa variabile indica l'oggetto *Dog 1* (stesso colore).", worldN: "Mondo {n}", nextCard: "Scheda successiva", lockedWorld: "Completa {w} per sbloccare questo mondo, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Completati",
+      missionN: "Missione {n}", newPart: "Nuovo pezzo per il tuo robot", parts: "Pezzi del robot", partsHow: "Ogni missione completata aggiunge un pezzo al tuo robot.", partFrom: "{l} · missione {n}", medalsHow: "Le medaglie ti danno esperienza in più.", xpExp: "Esperienza", nextTitle: "Prossima missione", demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "**→ Dog 1** vuol dire: questa variabile indica l'oggetto *Dog 1* (stesso colore).", worldN: "Livello {n}", nextCard: "Prossimo passo", lockedWorld: "Completa {w} per sbloccare questo livello, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Missioni",
       yourRobot: "Il tuo robot", memStart: "Pronti! Il programma non è ancora partito. Premi **Riga successiva ▶** per eseguire la prima riga.", memNext: "Riga successiva", memMain: "Programma", memTemp: "temporanee: spariscono alla fine", memNoVars: "ancora nessuna variabile", memOut: "Cosa stampa il programma",
-      starsText: "{n} stelle su 3", starsHow: "1 stella: completi il livello. 2 stelle: senza usare “Mostra la risposta”. 3 stelle: sfida senza errori né suggerimenti.", placeUnlocked: "Mondi sbloccati",
+      starsText: "{n} stelle su 3", starsHow: "1 stella: completi la missione. 2 stelle: senza usare “Mostra la risposta”. 3 stelle: batti il boss senza errori né suggerimenti.", placeUnlocked: "Livelli sbloccati",
       run: "Esegui ▶", play: "Avvia", clear: "Cancella tutto", blocksLabel: "Blocchi: tocca per aggiungere", dropMain: "Tocca un blocco qui sopra per iniziare", dropInside: "Tocca un blocco per metterlo dentro", addHere: "I nuovi blocchi vanno qui",
       addBlocks: "Prima aggiungi qualche blocco.", w_move: "vai avanti", w_turnLeft: "gira a sinistra", w_turnRight: "gira a destra", w_repeat: "ripeti {n} volte", words: "Parole",
       res_wall: "Ahi! Bit ha sbattuto contro un muro.", res_noflag: "Bit si è fermato prima della bandiera.", res_stars: "Bit è arrivato alla bandiera, ma ha perso qualche stella.",
       tooMany: "Bit ce l'ha fatta! Ora fallo con al massimo {n} blocchi.", maxBlocks: "max {n} blocchi", blocksCount: "{a} blocchi", demoOk: "Bit ce l'ha fatta!", kind_grid: "Programma Bit",
       tagline: "impara", heroHi: "Ciao, {name}!", heroWelcome: "Pronto a giocare?",
-      heroText: "Impara a programmare un passo alla volta. Guadagna XP e badge lungo la strada.",
+      heroText: "Impara a programmare un passo alla volta. Completa le missioni, potenzia il tuo robot e guadagna esperienza.",
       continue: "Continua", start: "Inizia", placementBtn: "Scopri il tuo livello", placementRetake: "Rifai il test di livello",
-      level: "Livello", xpToNext: "{n} XP al livello {l}", stageLocked: "Bloccata", stageOpen: "Aperta", stageDone: "Completata",
+      stageLocked: "Bloccata", stageOpen: "Aperta", stageDone: "Completata",
       soon: "In arrivo", locked: "Bloccato", done: "Fatto", inProgress: "{p}% fatto", notStarted: "Da iniziare",
-      learn: "Impara", quiz: "Quiz", practice: "Esercizi", challenge: "Sfida",
+      learn: "Impara", quiz: "Quiz", practice: "Esercizi", challenge: "Boss",
       back: "← Mappa", check: "Verifica", next: "Avanti", prev: "Indietro", hint: "Suggerimento", showAnswer: "Mostra la risposta",
       correct: "Giusto!", wrong: "Non ancora. Guarda di nuovo e riprova.", chooseFirst: "Prima scegli una risposta.",
       fillFirst: "Prima completa tutti gli spazi.", revealed: "Ecco la risposta.", alreadySolved: "Già risolto. Puoi rifarlo per esercitarti.",
-      goQuiz: "Inizia il quiz", goPractice: "Vai agli esercizi", goChallenge: "Affronta la sfida", finishModule: "Completa il modulo",
+      goQuiz: "Inizia il quiz", goPractice: "Vai agli esercizi", goChallenge: "Affronta il boss", finishModule: "Completa la missione",
       sectionDone: "Sezione completata", sectionDoneText: "Ottimo lavoro. Passiamo alla parte successiva.",
-      modDoneTitle: "Modulo completato!", modDoneText: "Hai guadagnato il badge {b} e {x} XP bonus.",
-      nextModule: "Modulo successivo", backMap: "Torna alla mappa",
+      modDoneTitle: "Missione compiuta!", modDoneText: "Nuovo pezzo per il tuo robot: {b}. +{x} XP.",
+      nextModule: "Prossima missione", backMap: "Torna alla mappa",
       kind_choice: "Scegli", kind_predict: "Prevedi l'output", kind_order: "Metti in ordine", kind_fill: "Completa gli spazi",
       kind_bug: "Trova il bug", kind_trace: "Segui i valori", kind_match: "Abbina",
       typeOutput: "Scrivi esattamente cosa stampa il programma…", yourProgram: "Il tuo programma", pieces: "Pezzi (tocca per spostare)",
       tapToAdd: "Tocca i pezzi qui sotto nell'ordine giusto.", empty: "Vuoto", choose: "Scegli…",
-      variables: "Variabili", objects: "Oggetti", noObjects: "Ancora nessun oggetto", step: "Passo {i} di {n}", restart: "Ricomincia", stepFwd: "Esegui riga",
+      variables: "Variabili", objects: "Oggetti", noObjects: "Ancora nessun oggetto", step: "{i} / {n}", restart: "Ricomincia", stepFwd: "Esegui riga",
       profile: "Il mio profilo", nickname: "Nickname", nicknameHelp: "Solo un nickname. Non servono email o nome vero.",
       color: "Colore", language: "Lingua", save: "Salva", saved: "Salvato",
-      badges: "Badge", history: "Storico", noHistory: "Qui compariranno i tuoi traguardi.",
-      statsXp: "XP", statsLevel: "Livello", statsModules: "Moduli",
+      badges: "Medaglie", history: "Storico", noHistory: "Qui compariranno i tuoi traguardi.",
+      statsXp: "Esperienza", statsModules: "Missioni",
       resetTitle: "Ricomincia da zero", resetText: "Cancella tutti i progressi in questo browser.", resetBtn: "Cancella i miei progressi",
       resetSure: "Non si può annullare. Cancellare tutto?", resetYes: "Sì, cancella", cancel: "Annulla",
       placeTitle: "Scopri il tuo livello", placeIntro: "Otto domande brevi. Nessuna pressione: serve solo a capire da dove partire. Salta quelle che non sai.",
       placeSubmit: "Vedi il risultato", placeScore: "risposte giuste", placeStart: "Inizia da qui", placeRec: "Ti consigliamo di partire da",
-      placeSoon: "Le lezioni di questa tappa sono in preparazione. Intanto puoi esplorare le tappe già aperte.",
+      placeSoon: "Le missioni di questo livello sono in preparazione. Intanto puoi giocare i livelli già aperti.",
       placeDontKnow: "Non lo so",
-      newBadge: "Nuovo badge", levelUp: "Livello su!", levelUpText: "Hai raggiunto il livello {l}",
-      footer: "I tuoi progressi restano in questo browser.", site: "Lezioni mi.Game",
-      modulesCount: "{n} moduli", ofTotal: "{a} di {b}"
+      newBadge: "Nuova medaglia", footer: "I tuoi progressi restano in questo browser.", site: "Lezioni mi.Game",
+      modulesCount: "{n} missioni", ofTotal: "{a} di {b}"
     }
   };
   var LANGS = ["en", "es", "it"];
@@ -277,29 +274,62 @@
     return '<span class="medal' + (small ? " sm" : "") + '"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (GLYPH[glyph] || GLYPH.spark) + "</svg></span>";
   }
   var BASE_BADGES = [
-    { id: "first", glyph: "spark", name: { en: "First step", es: "Primer paso", it: "Primo passo" }, desc: { en: "Solve your first exercise", es: "Resuelve tu primer ejercicio", it: "Risolvi il tuo primo esercizio" } },
-    { id: "compass", glyph: "compass", name: { en: "Compass", es: "Brújula", it: "Bussola" }, desc: { en: "Take the level quiz", es: "Haz el test de nivel", it: "Fai il test di livello" } },
-    { id: "clean", glyph: "bolt", name: { en: "Clean run", es: "Sin fallos", it: "Percorso netto" }, desc: { en: "Beat a challenge with no hints and no mistakes", es: "Supera un desafío sin pistas ni errores", it: "Supera una sfida senza suggerimenti né errori" } },
+    { id: "first", xp: 10, glyph: "spark", name: { en: "First step", es: "Primer paso", it: "Primo passo" }, desc: { en: "Solve your first exercise", es: "Resuelve tu primer ejercicio", it: "Risolvi il tuo primo esercizio" } },
+    { id: "compass", xp: 20, glyph: "compass", name: { en: "Compass", es: "Brújula", it: "Bussola" }, desc: { en: "Take the level test", es: "Haz el test de nivel", it: "Fai il test di livello" } },
+    { id: "clean", xp: 30, glyph: "bolt", name: { en: "Clean run", es: "Sin fallos", it: "Percorso netto" }, desc: { en: "Beat a boss with no hints and no mistakes", es: "Vence a un jefe sin pistas ni errores", it: "Batti un boss senza suggerimenti né errori" } },
     { id: "xp250", glyph: "coin", name: { en: "Collector", es: "Coleccionista", it: "Collezionista" }, desc: { en: "Earn 250 XP", es: "Gana 250 XP", it: "Guadagna 250 XP" } },
     { id: "xp1000", glyph: "flag", name: { en: "Treasure", es: "Tesoro", it: "Tesoro" }, desc: { en: "Earn 1000 XP", es: "Gana 1000 XP", it: "Guadagna 1000 XP" } }
   ];
+  /* Medals: special achievements, each one gives bonus XP. */
   function allBadges() {
     var list = BASE_BADGES.slice();
     MG.stages.forEach(function (st) {
-      st.modules.forEach(function (e) {
-        var m = MG.modules[e.id];
-        if (m && m.badge) list.push({ id: "mod-" + m.id, glyph: m.badge.glyph, name: m.badge.name, desc: { en: "Complete " + tr(m.title), es: "Completa " + tr(m.title), it: "Completa " + tr(m.title) } });
-      });
-      if (st.badge) list.push({ id: "stage-" + st.id, glyph: st.badge.glyph, name: st.badge.name, desc: st.badge.desc || st.name });
+      if (st.badge) list.push({ id: "stage-" + st.id, xp: 100, glyph: st.badge.glyph, name: st.badge.name, desc: st.badge.desc || st.name });
     });
     return list;
   }
   function findBadge(id) { return allBadges().filter(function (b) { return b.id === id; })[0]; }
+
+  /* Robot parts: every mission adds one. Mission n of a level gives slot n, in that level's metal. */
+  var SLOTS = ["legs", "arms", "antenna", "jet", "visor", "helmet"];
+  var PART_NAME = {
+    legs: { en: "tracks", es: "Orugas", it: "Cingoli" }, arms: { en: "robot arms", es: "Brazos mecánicos", it: "Braccia meccaniche" },
+    antenna: { en: "star antenna", es: "Antena estrella", it: "Antenna stella" }, jet: { en: "rockets", es: "Cohetes", it: "Razzi" },
+    visor: { en: "visor", es: "Visor", it: "Visore" }, helmet: { en: "helmet", es: "Casco", it: "Casco" }
+  };
+  var METAL = [{ en: "Bronze", es: "de bronce", it: "di bronzo" }, { en: "Silver", es: "de plata", it: "d'argento" }, { en: "Gold", es: "de oro", it: "d'oro" }];
+  function partName(slot, tier) {
+    var l = S.lang, n = PART_NAME[slot][l] || PART_NAME[slot].en, mt = METAL[Math.min(tier, 2)][l] || METAL[Math.min(tier, 2)].en;
+    return l === "en" ? mt + " " + n : n + " " + mt;
+  }
+  function allParts() {
+    var list = [];
+    MG.stages.forEach(function (st, si) {
+      st.modules.forEach(function (e, j) {
+        var slot = SLOTS[j % SLOTS.length], tier = Math.min(si, 2);
+        list.push({ id: "mod-" + e.id, mod: e.id, slot: slot, tier: tier, si: si, n: j + 1, name: partName(slot, tier), ready: !!MG.modules[e.id] });
+      });
+    });
+    return list;
+  }
+  function robotParts() {
+    var out = {};
+    allParts().forEach(function (p) { if (S.badges[p.id] && (out[p.slot] === undefined || p.tier > out[p.slot])) out[p.slot] = p.tier; });
+    return out;
+  }
+  function robotSvg(color, cls) { return MGSite.bit(color || robotColor(), { parts: robotParts(), cls: cls }); }
+  function partIcon(p) { var o = {}; o[p.slot] = p.tier; return MGSite.bit("#e3ecf1", { parts: o }); }
   function award(id) {
     if (S.badges[id]) return;
     S.badges[id] = Date.now();
+    var part = allParts().filter(function (p) { return p.id === id; })[0];
+    if (part) { log("part", part.name); save(); return; }
     var b = findBadge(id);
-    if (b) { log("badge", tr(b.name)); toast(medal(b.glyph, true), t("newBadge"), tr(b.name)); }
+    if (b) {
+      log("badge", tr(b.name));
+      toast(medal(b.glyph, true), t("newBadge"), tr(b.name) + (b.xp ? " · +" + b.xp + " XP" : ""));
+      if (b.xp) addXP(b.xp);
+    }
     save();
   }
   function log(kind, text) {
@@ -307,15 +337,10 @@
     S.history = S.history.slice(0, 60);
   }
 
-  /* ---------- XP & levels ---------- */
-  function levelOf(xp) { var n = 1; while (xp >= 50 * (n + 1) * n) n++; return n; }
-  function levelFloor(n) { return 50 * n * (n - 1); }
+  /* ---------- XP ---------- */
   function addXP(n) {
     if (!n) return;
-    var before = levelOf(S.xp);
     S.xp += n;
-    var after = levelOf(S.xp);
-    if (after > before) { log("level", t("levelUpText", { l: after })); toast(medal("crown", true), t("levelUp"), t("levelUpText", { l: after })); }
     if (S.xp >= 250) award("xp250");
     if (S.xp >= 1000) award("xp1000");
     save();
@@ -353,7 +378,7 @@
     var si = stageOf(id);
     if (si < 0) return "";
     var j = MG.stages[si].modules.map(function (e) { return e.id; }).indexOf(id);
-    return (si + 1) + "-" + (j + 1);
+    return t("missionN", { n: j + 1 });
   }
   function starsOf(m) {
     if (!m || !moduleDone(m)) return 0;
@@ -416,7 +441,7 @@
   var topbar, main;
   var ROBOT = ["#58dce0", "#ffd02f", "#42c83d", "#ffae16", "#ff8cc6", "#c9472f"];
   function robotColor() { return ROBOT[(S.color || 0) % ROBOT.length]; }
-  function avatarHtml(big) { return '<span class="avatar' + (big ? " big" : "") + '">' + MGSite.bit(robotColor()) + "</span>"; }
+  function avatarHtml(big) { return '<span class="avatar' + (big ? " big" : "") + '">' + robotSvg() + "</span>"; }
   var STAR = '<path d="M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z" fill="#ffc93c" stroke="#174e70" stroke-width="1.8" stroke-linejoin="round"/>';
   function starSvg(on) { return '<svg viewBox="0 0 24 24" aria-hidden="true"' + (on ? "" : ' class="s-off"') + ">" + STAR + "</svg>"; }
   var LOCK = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="3"/><path d="M8 11V8a4 4 0 018 0v3"/></svg>';
@@ -425,15 +450,13 @@
     if (!topbar) return;
     MGSite.header(topbar, {
       root: "../", active: "learn",
-      extra: (cloud && !cloudUid) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("level")) + " " + levelOf(S.xp) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
-        '<a class="avatar" href="#profile" aria-label="' + esc(t("profile")) + '">' + MGSite.bit(robotColor()) + "</a>"
+      extra: (cloud && !cloudUid) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("xpExp")) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
+        '<a class="avatar" href="#profile" aria-label="' + esc(t("profile")) + '">' + robotSvg() + "</a>"
     });
   }
 
   /* ---------- views ---------- */
   function viewHome() {
-    var lvl = levelOf(S.xp), lo = levelFloor(lvl), hi = levelFloor(lvl + 1);
-    var pct = Math.round(((S.xp - lo) / (hi - lo)) * 100);
     var target = nextTarget();
     var wrap = h("div", "home");
 
@@ -442,11 +465,9 @@
     var earned = allBadges().filter(function (b) { return S.badges[b.id]; }).length;
     var pl = h("aside", "player card");
     pl.innerHTML =
-      '<div class="player-top">' + avatarHtml(true) + "<div><h1>" + esc(S.name ? t("heroHi", { name: S.name }) : t("heroWelcome")) + '</h1><span class="lvl-badge">' + esc(t("level")) + " " + lvl + "</span></div></div>" +
-      '<div><div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="' + pct + '"><i style="width:' + pct + '%"></i></div>' +
-      '<div class="bar-legend"><span>' + S.xp + " XP</span><span>" + esc(t("xpToNext", { n: hi - S.xp, l: lvl + 1 })) + "</span></div></div>" +
-      '<div class="tally"><div><b>' + stars + "</b><span>" + esc(t("starsLabel")) + "</span></div><div><b>" + earned + "</b><span>" + esc(t("badges")) + "</span></div><div><b>" + Object.keys(S.modules).length + "</b><span>" + esc(t("levelsDone")) + "</span></div></div>";
-    if (target) pl.appendChild(btn(esc((S.pos[target.id] ? t("continue") : t("start")) + " " + levelCode(target.id) + ": " + tr(target.title)), "btn-primary btn-big", function () { location.hash = "m-" + target.id; }));
+      '<div class="player-top">' + avatarHtml(true) + "<div><h1>" + esc(S.name ? t("heroHi", { name: S.name }) : t("heroWelcome")) + "</h1></div></div>" +
+      '<div class="tally"><div><b>' + S.xp + "</b><span>" + esc(t("statsXp")) + " (XP)</span></div><div><b>" + stars + "</b><span>" + esc(t("starsLabel")) + "</span></div><div><b>" + earned + "</b><span>" + esc(t("badges")) + "</span></div><div><b>" + Object.keys(S.modules).length + "</b><span>" + esc(t("levelsDone")) + "</span></div></div>";
+    if (target) pl.appendChild(btn(esc((S.pos[target.id] ? t("continue") : t("start")) + ": " + tr(target.title)), "btn-primary btn-big", function () { location.hash = "m-" + target.id; }));
     if (MG.placement) pl.appendChild(btn(esc(S.placement ? t("placementRetake") : t("placementBtn")), "btn-ghost", function () { location.hash = "placement"; }));
     wrap.appendChild(pl);
 
@@ -481,16 +502,16 @@
       '<path class="r1" d="' + d + '" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>' +
       '<path class="r2" d="' + d + '" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>';
     st.modules.forEach(function (e, j) {
-      var m = MG.modules[e.id], code = (si + 1) + "-" + (j + 1), p = pts[j];
+      var m = MG.modules[e.id], code = String(j + 1), p = pts[j];
       var avail = !!m && open && moduleUnlocked(m.id), done = !!m && moduleDone(m);
       var el = h(avail ? "a" : "div", "lvl" + (done ? " done" : "") + (avail ? "" : " off") + (avail && target === m ? " cur" : ""));
       if (avail) el.href = "#m-" + m.id;
       el.style.left = p.x + "%";
       el.style.top = p.y + "px";
       var sub = !m ? t("soon") : !avail ? t("locked") : moduleProgress(m) ? t("inProgress", { p: moduleProgress(m) }) : t("startHere");
-      el.innerHTML = (avail && target === m ? '<span class="here">' + MGSite.bit(robotColor()) + "</span>" : "") +
+      el.innerHTML = (avail && target === m ? '<span class="here">' + robotSvg() + "</span>" : "") +
         '<span class="lvl-btn">' + (m && !avail ? LOCK : esc(code)) + "</span>" +
-        '<span class="lvl-name">' + esc(code + " · " + tr(m ? m.title : e.title)) + "</span>" +
+        '<span class="lvl-name">' + esc(tr(m ? m.title : e.title)) + "</span>" +
         (done ? starsHtml(starsOf(m)) : '<span class="lvl-sub">' + esc(sub) + "</span>");
       box.appendChild(el);
     });
@@ -549,7 +570,7 @@
         (st.modules.some(function (e) { return MG.modules[e.id]; }) ? "" : '<p class="prose muted">' + esc(t("placeSoon")) + "</p>") + "</div>";
       var row = h("div", "row");
       row.style.justifyContent = "center";
-      if (first) row.appendChild(btn(esc(t("placeStart") + ": " + levelCode(first.id) + " " + tr(first.title)), "btn-primary", function () { location.hash = "m-" + first.id; }));
+      if (first) row.appendChild(btn(esc(t("placeStart") + ": " + tr(first.title)), "btn-primary", function () { location.hash = "m-" + first.id; }));
       row.appendChild(btn(esc(t("backMap")), "btn-ghost", function () { location.hash = "home"; }));
       panel.appendChild(row);
       renderTopbar();
@@ -681,16 +702,16 @@
     if (show || first) celebrate(m);
   }
   function celebrate(m) {
-    var b = findBadge("mod-" + m.id) || BASE_BADGES[0];
+    var part = allParts().filter(function (x) { return x.mod === m.id; })[0];
     var n = starsOf(m);
     main.innerHTML = "";
     var w = h("div", "wrap");
     var p = h("div", "panel");
-    p.innerHTML = '<div class="celebrate">' + MGSite.bit(robotColor(), { cls: "hero-bit" }) + '<div class="big-stars">' + [0, 1, 2].map(function (i) { return starSvg(i < n); }).join("") + "</div><h2>" + esc(t("modDoneTitle")) + '</h2><p class="prose"><b>' + esc(t("starsText", { n: n })) + "</b> · " + esc(t("modDoneText", { b: tr(b.name), x: 50 })) + '</p><p class="prose muted">' + esc(t("starsHow")) + "</p></div>";
+    p.innerHTML = '<div class="celebrate">' + robotSvg(null, "hero-bit") + '<div class="big-stars">' + [0, 1, 2].map(function (i) { return starSvg(i < n); }).join("") + "</div><h2>" + esc(t("modDoneTitle")) + '</h2><p class="prose"><b>' + esc(t("starsText", { n: n })) + "</b> · " + esc(part ? t("modDoneText", { b: part.name, x: 50 }) : "+50 XP") + '</p><p class="prose muted">' + esc(t("starsHow")) + "</p></div>";
     var row = h("div", "row");
     row.style.justifyContent = "center";
     var nx = nextModuleAfter(m);
-    if (nx) row.appendChild(btn(esc(t("nextModule") + " " + levelCode(nx.id) + ": " + tr(nx.title)), "btn-primary btn-big", function () { location.hash = "m-" + nx.id; }));
+    if (nx) row.appendChild(btn(esc(t("nextModule") + ": " + tr(nx.title)), "btn-primary btn-big", function () { location.hash = "m-" + nx.id; }));
     row.appendChild(btn(esc(t("backMap")), nx ? "btn-ghost" : "btn-primary btn-big", function () { location.hash = "home"; render(); }));
     p.appendChild(row);
     w.appendChild(p);
@@ -1338,7 +1359,9 @@
     var vars = h("div", "mem-box");
     var objs = h("div", "mem-box");
     var cons = h("div", "console");
-    side.appendChild(talk); side.appendChild(ctrl); side.appendChild(vars); side.appendChild(objs); side.appendChild(cons);
+    /* no objects in this example (e.g. only numbers and text): hide the Objects box */
+    var anyHeap = viz.steps.some(function (x) { return x.heap && x.heap.length; });
+    side.appendChild(talk); side.appendChild(ctrl); side.appendChild(vars); if (anyHeap) side.appendChild(objs); side.appendChild(cons);
     root.appendChild(codeHost); root.appendChild(side);
 
     function draw() {
@@ -1406,7 +1429,7 @@
 
     var me = h("div", "card");
     me.innerHTML =
-      '<div class="row" style="margin-bottom:18px">' + avatarHtml(true) + '<div><h2 style="margin:0">' + esc(S.name || "—") + '</h2><span class="lvl-badge">' + esc(t("level")) + " " + levelOf(S.xp) + "</span></div></div>" +
+      '<div class="row" style="margin-bottom:18px">' + avatarHtml(true) + '<div><h2 style="margin:0">' + esc(S.name || "—") + '</h2><span class="lvl-badge">' + S.xp + " XP</span></div></div>" +
       '<div class="field"><span class="lab">' + esc(t("yourRobot")) + '</span><div class="robots">' +
       ROBOT.map(function (c, i) { return '<button type="button" data-c="' + i + '" aria-pressed="' + ((S.color || 0) % ROBOT.length === i) + '" aria-label="' + esc(t("yourRobot")) + " " + (i + 1) + '">' + MGSite.bit(c) + "</button>"; }).join("") +
       "</div></div>" +
@@ -1422,15 +1445,21 @@
     grid.appendChild(me);
 
     var right = h("div", "stack");
+    var pc = h("div", "card");
+    pc.innerHTML = "<h2>" + esc(t("parts")) + '</h2><p class="muted" style="margin-top:0">' + esc(t("partsHow")) + '</p><div class="badges">' + allParts().filter(function (p) { return p.ready; }).map(function (p) {
+      return '<div class="badge part' + (S.badges[p.id] ? "" : " off") + '"><span class="part-ic">' + partIcon(p) + "</span><b>" + esc(p.name) + "</b><span>" + esc(t("partFrom", { l: tr(MG.stages[p.si].name), n: p.n })) + "</span></div>";
+    }).join("") + "</div>";
+    right.appendChild(pc);
+
     var bc = h("div", "card");
-    bc.innerHTML = "<h2>" + esc(t("badges")) + '</h2><div class="badges">' + allBadges().map(function (b) {
-      return '<div class="badge' + (S.badges[b.id] ? "" : " off") + '">' + medal(b.glyph) + "<b>" + esc(tr(b.name)) + "</b><span>" + esc(tr(b.desc)) + "</span></div>";
+    bc.innerHTML = "<h2>" + esc(t("badges")) + '</h2><p class="muted" style="margin-top:0">' + esc(t("medalsHow")) + '</p><div class="badges">' + allBadges().map(function (b) {
+      return '<div class="badge' + (S.badges[b.id] ? "" : " off") + '">' + medal(b.glyph) + "<b>" + esc(tr(b.name)) + "</b><span>" + esc(tr(b.desc)) + (b.xp ? " · +" + b.xp + " XP" : "") + "</span></div>";
     }).join("") + "</div>";
     right.appendChild(bc);
 
     var hc = h("div", "card");
     hc.innerHTML = "<h2>" + esc(t("history")) + "</h2>" + (S.history.length ? '<ul class="hist">' + S.history.slice(0, 20).map(function (e) {
-      var label = e.k === "badge" ? t("newBadge") + ": " : e.k === "module" ? "✓ " : e.k === "placement" ? t("placeTitle") + ": " : "";
+      var label = e.k === "badge" ? t("newBadge") + ": " : e.k === "part" ? t("newPart") + ": " : e.k === "module" ? "✓ " : e.k === "placement" ? t("placeTitle") + ": " : "";
       return "<li><span>" + esc(label + e.x) + "</span><time>" + esc(fmtDate(e.t)) + "</time></li>";
     }).join("") + "</ul>" : '<p class="muted">' + esc(t("noHistory")) + "</p>");
     right.appendChild(hc);

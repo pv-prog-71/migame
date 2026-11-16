@@ -1,4 +1,4 @@
-/* LEVEL 3-2: Inheritance (Inventor world) */
+/* INVENTOR · mission 2: Inheritance */
 (function () {
   var T = function (en, es, it) { return { en: en, es: es, it: it }; };
   var main = function (vars) { return { name: "main", vars: vars || {} }; };

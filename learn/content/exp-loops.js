@@ -1,4 +1,4 @@
-/* MODULE: Loops (Explorer stage). Uses the "repeat" block. */
+/* EXPLORER · mission 2: Loops. Uses the "repeat" block. */
 (function () {
   var T = function (en, es, it) { return { en: en, es: es, it: it }; };
   var ALL = ["move", "turnLeft", "turnRight", "repeat"];

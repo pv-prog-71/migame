@@ -1,4 +1,4 @@
-/* LEVEL 3-1: Classes & objects (Inventor world) */
+/* INVENTOR · mission 1: Classes & objects */
 (function () {
   var T = function (en, es, it) { return { en: en, es: es, it: it }; };
   var main = function (vars) { return { name: "main", vars: vars || {} }; };

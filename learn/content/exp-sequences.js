@@ -1,4 +1,4 @@
-/* MODULE: Step by step (Explorer stage)
+/* EXPLORER · mission 1: Step by step
    Maps for "grid" puzzles:  #  wall   .  floor   *  star   F  flag
    Bit's start and direction:  >  right   <  left   ^  up   v  down
    Blocks: "move", "turnLeft", "turnRight", { repeat: 3, do: [ ... ] } */

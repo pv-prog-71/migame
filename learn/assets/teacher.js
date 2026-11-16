@@ -8,7 +8,7 @@
       open: "Apri Gioca e impara", logout: "Esci",
       newTitle: "Nuovo studente", newHelp: "Scegli un nickname facile, senza nome e cognome veri.", nick: "Nickname", create: "Crea studente",
       made: "Studente creato. Dai questi dati allo studente:", code: "Codice", copy: "Copia", copied: "Copiato",
-      listTitle: "I tuoi studenti", none: "Ancora nessuno studente.", show: "Mostra", level: "Livello", levels: "Livelli completati", last: "Ultimo accesso",
+      listTitle: "I tuoi studenti", none: "Ancora nessuno studente.", show: "Mostra", levels: "Missioni completate", last: "Ultimo accesso",
       remove: "Disattiva", sure: "Disattivare? I progressi vengono cancellati.", yes: "Sì", no: "No", never: "mai",
       badLogin: "Email o password non giuste.", tooMany: "Troppi tentativi. Aspetta qualche minuto.", network: "Nessuna connessione.", nickTaken: "Questo nickname esiste già. Scegline un altro.",
       shortNick: "Il nickname deve avere almeno 2 lettere o numeri.", denied: "Permesso negato: controlla le regole di Firestore e il tuo UID.", generic: "Qualcosa è andato storto. Riprova.",
@@ -20,7 +20,7 @@
       open: "Abrir Juega y aprende", logout: "Salir",
       newTitle: "Nuevo alumno", newHelp: "Elige un apodo fácil, sin nombre ni apellidos reales.", nick: "Apodo", create: "Crear alumno",
       made: "Alumno creado. Dale estos datos:", code: "Código", copy: "Copiar", copied: "Copiado",
-      listTitle: "Tus alumnos", none: "Todavía no hay alumnos.", show: "Ver", level: "Nivel", levels: "Niveles completados", last: "Último acceso",
+      listTitle: "Tus alumnos", none: "Todavía no hay alumnos.", show: "Ver", levels: "Misiones completadas", last: "Último acceso",
       remove: "Desactivar", sure: "¿Desactivar? Se borra su progreso.", yes: "Sí", no: "No", never: "nunca",
       badLogin: "Email o contraseña incorrectos.", tooMany: "Demasiados intentos. Espera unos minutos.", network: "No hay conexión.", nickTaken: "Este apodo ya existe. Elige otro.",
       shortNick: "El apodo debe tener al menos 2 letras o números.", denied: "Permiso denegado: revisa las reglas de Firestore y tu UID.", generic: "Algo ha ido mal. Vuelve a intentarlo.",
@@ -32,7 +32,7 @@
       open: "Open Play & learn", logout: "Log out",
       newTitle: "New student", newHelp: "Pick an easy nickname, not their real name.", nick: "Nickname", create: "Create student",
       made: "Student created. Give them these details:", code: "Code", copy: "Copy", copied: "Copied",
-      listTitle: "Your students", none: "No students yet.", show: "Show", level: "Level", levels: "Levels completed", last: "Last seen",
+      listTitle: "Your students", none: "No students yet.", show: "Show", levels: "Missions completed", last: "Last seen",
       remove: "Deactivate", sure: "Deactivate? Their progress is deleted.", yes: "Yes", no: "No", never: "never",
       badLogin: "Wrong email or password.", tooMany: "Too many tries. Wait a few minutes.", network: "No connection.", nickTaken: "This nickname already exists. Pick another one.",
       shortNick: "The nickname needs at least 2 letters or numbers.", denied: "Permission denied: check the Firestore rules and your UID.", generic: "Something went wrong. Try again.",
@@ -47,11 +47,10 @@
   function t(k, v) { var s = L()[k] || T.it[k] || k; if (v) Object.keys(v).forEach(function (x) { s = s.split("{" + x + "}").join(v[x]); }); return s; }
   function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]; }); }
   function errText(e) { var k = e && e.code === "short-nick" ? "shortNick" : MGCloud.errKey(e); return t(k); }
-  function levelOf(xp) { var n = 1; while (xp >= 50 * (n + 1) * n) n++; return n; }
   function codeOf(id) {
     for (var i = 0; i < (MG.stages || []).length; i++) {
       var j = MG.stages[i].modules.map(function (e) { return e.id; }).indexOf(id);
-      if (j >= 0) return (i + 1) + "-" + (j + 1);
+      if (j >= 0) { var nm = MG.stages[i].name; nm = (nm[MGSite.lang()] || nm.en || "?"); return nm.charAt(0) + (j + 1); }
     }
     return id;
   }
@@ -144,11 +143,11 @@
     if (!el) return;
     var l = state.list || [];
     if (!l.length) { el.innerHTML = '<p class="empty">' + esc(t("none")) + "</p>"; return; }
-    el.innerHTML = '<div class="tbl-wrap"><table><thead><tr><th>' + esc(t("nick")) + "</th><th>" + esc(t("code")) + "</th><th>" + esc(t("level")) + "</th><th>XP</th><th>" + esc(t("levels")) + "</th><th>" + esc(t("last")) + "</th><th></th></tr></thead><tbody>" +
+    el.innerHTML = '<div class="tbl-wrap"><table><thead><tr><th>' + esc(t("nick")) + "</th><th>" + esc(t("code")) + "</th><th>XP</th><th>" + esc(t("levels")) + "</th><th>" + esc(t("last")) + "</th><th></th></tr></thead><tbody>" +
       l.map(function (s, i) {
         return "<tr><td><span class=\"who\">" + MGSite.bit(ROBOT[(s.color || 0) % ROBOT.length]) + esc(s.nick) + '</span></td>' +
           '<td class="codecell" data-i="' + i + '"><button type="button">' + esc(t("show")) + "</button></td>" +
-          '<td class="tnum">' + levelOf(s.xp) + '</td><td class="tnum">' + s.xp + "</td>" +
+          '<td class="tnum">' + s.xp + "</td>" +
           '<td><div class="lv">' + (s.done.length ? s.done.map(function (id) { return "<span>" + esc(codeOf(id)) + "</span>"; }).join("") : "—") + "</div></td>" +
           "<td>" + esc(when(s.updatedAt)) + '</td><td class="rm" data-i="' + i + '"><button type="button" class="act danger">' + esc(t("remove")) + "</button></td></tr>";
       }).join("") + "</tbody></table></div>";

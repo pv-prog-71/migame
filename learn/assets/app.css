@@ -52,7 +52,7 @@ main { padding-block: 26px 10px; min-height: 60vh; }
 .bar { height: 18px; border-radius: 99px; background: var(--soft); border: 2px solid var(--line); overflow: hidden; }
 .bar > i { display: block; height: 100%; background: var(--sun); border-right: 2px solid var(--line); transition: width .6s ease; }
 .bar-legend { display: flex; justify-content: space-between; font-size: var(--s-xs); font-weight: 800; color: var(--muted); margin-top: 4px; font-variant-numeric: tabular-nums; }
-.tally { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.tally { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
 .tally div { background: var(--soft); border-radius: 14px; padding: 8px 4px; text-align: center; border: 2px solid var(--hair); }
 .tally b { display: block; font-family: var(--f-display); font-size: 1.6rem; line-height: 1.1; font-variant-numeric: tabular-nums; }
 .tally span { font-size: var(--s-xs); font-weight: 800; color: var(--muted); }
@@ -413,3 +413,8 @@ body > main { flex: 1 0 auto; width: 100%; }
 .site-head .avatar svg { width: 40px; height: 40px; }
 .site-head .chip-xp { border-color: #0a2a3d; }
 main { padding-top: 34px; }
+
+/* v1.3 robot parts */
+.part-ic { width: 64px; height: 64px; display: grid; place-items: center; }
+.part-ic svg { width: 60px; height: 60px; }
+.badge.part.off .part-ic { opacity: .6; }

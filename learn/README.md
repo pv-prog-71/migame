@@ -24,7 +24,7 @@ learn/
   index.html            pagina principale
   assets/app.css        grafica
   assets/app.js         motore dell'app (non serve toccarlo)
-  content/course.js     mappa del corso: tappe, moduli, test di livello
+  content/course.js     mappa del corso: livelli, missioni, test di livello
   content/exp-sequences.js     modulo "Passo dopo passo"
   content/exp-loops.js         modulo "Cicli"
   content/inv-classes.js       modulo "Classi e oggetti"
@@ -114,7 +114,7 @@ viz: { type: "tree", nodes: [
 
 Tutti accettano anche `q` (domanda), `hint` (suggerimento) ed `explain` (spiegazione mostrata dopo).
 
-### Il mondo di Bit (tappa Esploratore)
+### La griglia di Bit (livello Esploratore)
 
 La mappa è una lista di righe, tutte della stessa lunghezza:
 
@@ -131,11 +131,20 @@ Per vincere Bit deve finire sulla bandiera dopo aver preso tutte le stelle. Qual
 
 Nei moduli Esploratore i testi sono in tre lingue con la scorciatoia `T("inglese", "spagnolo", "italiano")`.
 
-## Punti e badge
+## Nomi nel gioco
 
-- 10 XP per esercizio (20 nella sfida), metà se serve più di un tentativo, meno 3 se si usa il suggerimento, 0 se si chiede la risposta.
-- 10 XP per aver letto la teoria, 50 XP bonus per ogni modulo completato.
-- Il badge di un modulo si definisce nel file del modulo con `badge: { glyph, name }`.
+- **Livello**: Esploratore, Apprendista, Inventore (in `course.js` si chiamano `stages`).
+- **Missione**: una tappa sulla mappa, dentro un livello (Sequenze, Cicli, Funzioni…). Nei file si chiama modulo: un file in `content/` per missione.
+- **Passo**: una pagina della teoria («Prossimo passo»).
+- **Boss**: la sezione sfida (`challenge`) di una missione.
+- **Test di livello**: le 8 domande che dicono da quale livello partire.
+
+## Esperienza, pezzi del robot e medaglie
+
+- 10 XP per esercizio (20 nel boss), metà se serve più di un tentativo, meno 3 se si usa il suggerimento, 0 se si chiede la risposta.
+- 10 XP per aver letto la teoria, 50 XP bonus per ogni missione completata.
+- **Pezzi del robot**: ogni missione completata aggiunge un pezzo, che si vede sul robot. La 1ª missione di un livello dà i cingoli, la 2ª le braccia, la 3ª l'antenna stella, la 4ª i razzi, la 5ª il visore, la 6ª il casco. Esploratore = bronzo, Apprendista = argento, Inventore = oro. Non serve scrivere niente nel file della missione: dipende dalla posizione in `course.js`.
+- **Medaglie**: Primo passo (+10 XP), Bussola (test di livello, +20 XP), Percorso netto (boss senza errori né suggerimenti, +30 XP), Collezionista (250 XP), Tesoro (1000 XP) e una per ogni livello completato (+100 XP).
   Icone disponibili: `spark`, `compass`, `bolt`, `coin`, `crown`, `blueprint`, `tree`, `gear`, `key`, `flag`.
 
 ## Area studenti (login)
@@ -151,10 +160,10 @@ Per attivare l'area studenti:
 Dal pannello:
 
 - **Crei gli studenti** con un nickname. Il codice segreto viene generato da solo (per esempio `pimolu42`). Con «Copia» copi nickname, codice e indirizzo per mandarli alla famiglia.
-- **Vedi i progressi** di ogni studente: livello, XP, livelli completati, ultimo accesso. Il codice resta visibile con «Mostra», così se uno studente lo dimentica glielo ridai.
+- **Vedi i progressi** di ogni studente: XP, missioni completate (E1 = Esploratore missione 1, A2 = Apprendista missione 2…), ultimo accesso. Il codice resta visibile con «Mostra», così se uno studente lo dimentica glielo ridai.
 - **Disattivi** uno studente: i suoi progressi vengono cancellati e non può più entrare. Quel nickname non si può riusare.
 
-Lo studente entra con nickname e codice. Maiuscole e accenti nel nickname non contano: «Lucía» e «lucia» sono lo stesso. Progressi, stelle, badge e colore del robot si salvano sul server e li ritrova su qualsiasi dispositivo. La lingua invece viene dal sito.
+Lo studente entra con nickname e codice. Maiuscole e accenti nel nickname non contano: «Lucía» e «lucia» sono lo stesso. Progressi, stelle, pezzi, medaglie e colore del robot si salvano sul server e li ritrova su qualsiasi dispositivo. La lingua invece viene dal sito.
 
 ## Progressi
 
@@ -164,6 +173,6 @@ Quando vorrai il login con sincronizzazione automatica (Firebase), basterà coll
 
 ## Sblocchi
 
-- I mondi si aprono in ordine: il mondo successivo si apre solo quando **tutti** i livelli del precedente sono completati. Finché un mondo ha livelli "in arrivo", il mondo dopo resta chiuso.
-- Il test di livello sblocca i mondi dal primo fino a quello consigliato (punteggio 0-3: mondo 1; 4-6: mondi 1-2; 7-8: mondi 1-3).
-- Stelle per livello: 1 se lo completi, 2 se non usi mai "Mostra la risposta", 3 se fai la sfida senza errori né suggerimenti.
+- I livelli si aprono in ordine: il livello successivo si apre solo quando **tutte** le missioni del precedente sono completate. Finché un livello ha missioni "in arrivo", il livello dopo resta chiuso.
+- Il test di livello sblocca i livelli dal primo fino a quello consigliato (punteggio 0-3: Esploratore; 4-6: fino ad Apprendista; 7-8: fino a Inventore).
+- Stelle per missione: 1 se la completi, 2 se non usi mai "Mostra la risposta", 3 se batti il boss senza errori né suggerimenti.
