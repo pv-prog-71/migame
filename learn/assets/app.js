@@ -417,7 +417,7 @@
   function renderTopbar() {
     if (!topbar) return;
     MGSite.header(topbar, {
-      root: "../", active: "learn", noLang: true,
+      root: "../", active: "learn",
       extra: (cloud && !cloudUid) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("level")) + " " + levelOf(S.xp) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
         '<a class="avatar" href="#profile" aria-label="' + esc(t("profile")) + '">' + MGSite.bit(robotColor()) + "</a>"
     });

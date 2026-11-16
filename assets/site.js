@@ -16,6 +16,9 @@
      While false, the app still works at learn/index.html (for tests) but no link points to it. */
   var SHOW_LEARN = true;
 
+  /* Site version: shown in the footer. Keep it equal to the VERSION file. */
+  var VERSION = "1.0";
+
   var NAV = {
     it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni online individuali di programmazione per bambini." },
     es: { lessons: "Las clases", how: "Cómo funciona", play: "Juega y aprende", contact: "Contacto", menu: "Menú", lang: "Idioma", foot: "Clases individuales online de programación para niños." },
@@ -76,7 +79,7 @@
     var r = opts.root || "", n = NAV[lang], home = r + "index.html";
     el.className = "site-foot";
     el.innerHTML = '<div class="wrap"><a class="logo" href="' + home + '"><img src="' + r + 'assets/img/logo.png" alt="mi.Game" width="130" height="38"></a>' +
-      "<span>" + esc(n.foot) + "</span></div>";
+      "<span>" + esc(n.foot) + '</span><small class="ver">v' + VERSION + "</small></div>";
   }
 
   function setLang(l) {
@@ -94,6 +97,7 @@
     setLang: setLang,
     onLang: function (fn) { listeners.push(fn); },
     showLearn: SHOW_LEARN,
+    version: VERSION,
     header: header,
     footer: footer,
     bit: bit
