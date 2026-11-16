@@ -17,7 +17,7 @@
   var SHOW_LEARN = true;
 
   /* Site version: kept in the footer data-version attribute. Keep it equal to the VERSION file. */
-  var VERSION = "1.9";
+  var VERSION = "1.11";
 
   var NAV = {
     it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni online individuali di programmazione per bambini." },
