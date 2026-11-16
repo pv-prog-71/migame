@@ -1,5 +1,7 @@
 /* mi.Game Play & learn — app styles. Shared tokens, header, buttons: ../../assets/site.css */
 :root {
+  /* Bit on the grid, stars and flag */
+  --bot: #58dce0; --bot-face: #e8fbfa; --c5: #c9472f; --c6: #ffd02f; --star-edge: #b8860b;
   --code-bg: #10293d;
   --code-line: #1d3d55;
   --code-fg: #eef1ff;
