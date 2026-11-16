@@ -1,0 +1,28 @@
+// mi.Game — Firestore security rules.
+// Paste this text in Firebase console → Firestore Database → Reglas (Rules) → Publicar.
+// Teacher account UID already filled in.
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function isTeacher() {
+      return request.auth != null && request.auth.uid == "oRUtFNWKFvaVNDQuLTfV851oXXK2";
+    }
+
+    // One record per student: nickname, robot colour, progress.
+    // Only the teacher can create or delete a student.
+    // Each student can read and update only their own record, and cannot change their nickname.
+    match /users/{uid} {
+      allow read: if isTeacher() || (request.auth != null && request.auth.uid == uid);
+      allow create, delete: if isTeacher();
+      allow update: if isTeacher()
+        || (request.auth != null && request.auth.uid == uid
+            && request.resource.data.nick == resource.data.nick);
+    }
+
+    // Students' login codes: only the teacher can see them.
+    match /codes/{uid} {
+      allow read, write: if isTeacher();
+    }
+  }
+}
