@@ -371,6 +371,8 @@
   function moduleUnlocked(id) {
     var si = stageOf(id);
     if (si < 0 || !stageUnlocked(si)) return false;
+    /* worlds below the level test result: every level is open, in any order */
+    if (S.placement && si < S.placement.stage) return !!MG.modules[id];
     var mods = MG.stages[si].modules;
     for (var i = 0; i < mods.length; i++) {
       if (mods[i].id === id) return true;
@@ -380,7 +382,12 @@
     return false;
   }
   function nextTarget() {
-    for (var i = 0; i < MG.stages.length; i++) {
+    /* start from the world suggested by the level test, then the others */
+    var p = S.placement ? Math.min(S.placement.stage, MG.stages.length - 1) : 0, order = [];
+    for (var k = p; k < MG.stages.length; k++) order.push(k);
+    for (k = 0; k < p; k++) order.push(k);
+    for (var o = 0; o < order.length; o++) {
+      var i = order[o];
       var mods = MG.stages[i].modules;
       for (var j = 0; j < mods.length; j++) {
         var m = MG.modules[mods[j].id];
@@ -417,7 +424,7 @@
   function renderTopbar() {
     if (!topbar) return;
     MGSite.header(topbar, {
-      root: "../", active: "learn", noLang: true,
+      root: "../", active: "learn",
       extra: (cloud && !cloudUid) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("level")) + " " + levelOf(S.xp) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
         '<a class="avatar" href="#profile" aria-label="' + esc(t("profile")) + '">' + MGSite.bit(robotColor()) + "</a>"
     });

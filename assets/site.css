@@ -158,3 +158,4 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+.site-foot .ver { font-size: .75rem; color: var(--muted); opacity: .7; font-family: var(--f-code); }
