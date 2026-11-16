@@ -66,6 +66,7 @@
   }
 
   function render() {
+    document.title = "mi.Game · " + ({ it: "Insegnante", es: "Profesor", en: "Teacher" }[MGSite.lang()] || "Teacher");
     chrome();
     root.innerHTML = "";
     if (!MGCloud.enabled) { root.innerHTML = '<div class="card"><h2>' + esc(t("title")) + "</h2><p>" + esc(t("off")) + "</p></div>"; return; }

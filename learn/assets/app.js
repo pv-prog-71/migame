@@ -1580,7 +1580,9 @@
   }
 
   /* ---------- router ---------- */
+  var PAGE_TITLE = { it: "mi.Game · Gioca e impara", es: "mi.Game · Juega y aprende", en: "mi.Game · Play & learn" };
   function render() {
+    document.title = PAGE_TITLE[S.lang] || PAGE_TITLE.en;
     renderTopbar();
     var hash = (location.hash || "").replace(/^#/, "") || "home";
     var view;
