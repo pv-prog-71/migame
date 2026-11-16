@@ -47,9 +47,9 @@
       {
         title: T("The four types you'll use most", "Los cuatro tipos que más usarás", "I quattro tipi che userai di più"),
         text: T(
-          "Every box has a type, chosen when you create it:\n\n- `int`: whole numbers, like `3` or `-10`\n- `double`: numbers with a decimal point, like `1.5`\n- `String`: text, always between quotes, like `\"Bit\"`\n- `boolean`: only `true` or `false`",
-          "Cada caja tiene un tipo, que eliges al crearla:\n\n- `int`: números enteros, como `3` o `-10`\n- `double`: números con decimales, como `1.5`\n- `String`: texto, siempre entre comillas, como `\"Bit\"`\n- `boolean`: solo `true` o `false`",
-          "Ogni scatola ha un tipo, che scegli quando la crei:\n\n- `int`: numeri interi, come `3` o `-10`\n- `double`: numeri con la virgola, come `1.5` (in Java si scrive con il punto)\n- `String`: testo, sempre tra virgolette, come `\"Bit\"`\n- `boolean`: solo `true` (vero) o `false` (falso)"
+          "Every box has a type, chosen when you create it:\n\n- `int`: whole numbers, like `3` or `-10`\n- `double`: numbers with a decimal point, like `1.5`\n- `String`: text, always between quotes, like `\"Bit\"` (capital S: in Java capitals matter)\n- `boolean`: only `true` or `false`",
+          "Cada caja tiene un tipo, que eliges al crearla:\n\n- `int`: números enteros, como `3` o `-10`\n- `double`: números con decimales, como `1.5`\n- `String`: texto, siempre entre comillas, como `\"Bit\"` (con S mayúscula: en Java las mayúsculas cuentan)\n- `boolean`: solo `true` o `false`",
+          "Ogni scatola ha un tipo, che scegli quando la crei:\n\n- `int`: numeri interi, come `3` o `-10`\n- `double`: numeri con la virgola, come `1.5` (in Java si scrive con il punto)\n- `String`: testo, sempre tra virgolette, come `\"Bit\"` (con la S maiuscola: in Java maiuscole e minuscole contano)\n- `boolean`: solo `true` (vero) o `false` (falso)"
         ),
         code: "int lives = 3;\ndouble speed = 1.5;\nString name = \"Bit\";\nboolean hasKey = false;",
         after: T(

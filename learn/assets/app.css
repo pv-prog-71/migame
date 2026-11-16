@@ -418,3 +418,15 @@ main { padding-top: 34px; }
 .part-ic { width: 64px; height: 64px; display: grid; place-items: center; }
 .part-ic svg { width: 60px; height: 60px; }
 .badge.part.off .part-ic { opacity: .6; }
+.player .lvl-badge { font-size: .82rem; white-space: nowrap; padding: 2px 10px 1px; }
+
+/* v1.5 right/wrong marks that don't rely on colour */
+.mk { display: inline-grid; place-items: center; width: 1.35em; height: 1.35em; border-radius: 50%; font-family: var(--f-body, sans-serif); font-weight: 900; font-size: .8em; line-height: 1; margin: 0 4px; vertical-align: middle; flex: none; }
+.mk.ok { background: #50d282; color: #0c2f45; }
+.mk.no { background: #ff6e5a; color: #fff; }
+.code input.blank.bad { border-bottom-style: solid; border-bottom-width: 3px; }
+.opt.good::after, .opt.bad::after { margin-left: auto; padding-left: 10px; font-weight: 900; }
+.opt.good::after { content: "✓"; color: var(--grass); }
+.opt.bad::after { content: "✗"; color: var(--coral); }
+.code .l.good::after { content: "  ✓"; color: #50d282; font-weight: 900; }
+.code .l.bad::after { content: "  ✗"; color: #ff6e5a; font-weight: 900; }
