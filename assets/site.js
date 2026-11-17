@@ -12,12 +12,17 @@
   }
   var lang = detect();
 
+  /* The home exists in three folders: / (Italian), /es/ and /en/.
+     homeOf("es", "../") -> "../es/" */
+  var HOME_DIR = { it: "", es: "es/", en: "en/" };
+  function homeOf(l, r) { return (r || "") + (HOME_DIR[l] || "") || "./"; }
+
   /* Set to true when "Play & learn" is ready to be shown on the site.
      While false, the app still works at learn/index.html (for tests) but no link points to it. */
   var SHOW_LEARN = true;
 
   /* Site version: kept in the footer data-version attribute. Keep it equal to the VERSION file. */
-  var VERSION = "1.13.1";
+  var VERSION = "1.14.1";
 
   var NAV = {
     it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni individuali online di iniziazione alla programmazione per bambini e principianti." },
@@ -75,7 +80,7 @@
      opts.extra: HTML for the right side (XP chip, avatar) */
   function header(el, opts) {
     opts = opts || {};
-    var r = opts.root || "", n = NAV[lang], home = r + "index.html";
+    var r = opts.root || "", n = NAV[lang], home = homeOf(lang, r);
     var onHome = opts.active === "home";
     var a = function (hash) { return onHome ? "#" + hash : home + "#" + hash; };
     el.className = "site-head";
@@ -103,12 +108,22 @@
 
   function footer(el, opts) {
     opts = opts || {};
-    var r = opts.root || "", n = NAV[lang], home = r + "index.html";
+    var r = opts.root || "", n = NAV[lang], home = onHomePage(opts) ? "#" : homeOf(lang, r);
     el.className = "site-foot";
     el.innerHTML = '<div class="wrap"><a class="logo" href="' + home + '"><img src="' + r + 'assets/img/logo-light.png" alt="mi.Game" width="130" height="38"></a>' +
       "<span>" + esc(n.foot) + "</span></div>";
     el.setAttribute("data-version", VERSION);
   }
+
+  function onHomePage(opts) { return opts && opts.active === "home"; }
+
+  /* A home page (/, /es/, /en/) shows its own language: use it without saving it as the visitor's choice. */
+  function useLang(l) {
+    if (LANGS.indexOf(l) < 0) return;
+    lang = l;
+    document.documentElement.lang = l;
+  }
+  function saved() { try { var l = localStorage.getItem(KEY); return LANGS.indexOf(l) >= 0 ? l : null; } catch (e) { return null; } }
 
   function setLang(l) {
     if (LANGS.indexOf(l) < 0 || l === lang) return;
@@ -123,6 +138,10 @@
     LANGS: LANGS,
     lang: function () { return lang; },
     setLang: setLang,
+    useLang: useLang,
+    savedLang: saved,
+    browserLang: function () { var n = ((navigator.language || "") + "").slice(0, 2).toLowerCase(); return LANGS.indexOf(n) >= 0 ? n : null; },
+    homeOf: homeOf,
     onLang: function (fn) { listeners.push(fn); },
     showLearn: SHOW_LEARN,
     version: VERSION,
