@@ -22,8 +22,8 @@
         modules: [
           { id: "exp-sequences" },
           { id: "exp-loops" },
-          { id: "exp-conditions", soon: true, title: T("If this, then that", "Si esto, entonces aquello", "Se questo, allora quello") },
-          { id: "exp-variables", soon: true, title: T("Boxes with names", "Cajas con nombre", "Scatole con un nome") }
+          { id: "exp-conditions" },
+          { id: "exp-variables" }
         ]
       },
       {
@@ -34,8 +34,8 @@
         modules: [
           { id: "app-types" },
           { id: "app-functions" },
-          { id: "app-scope", soon: true, title: T("Local and global", "Local y global", "Locale e globale") },
-          { id: "app-lists", soon: true, title: T("Lists", "Listas", "Liste") }
+          { id: "app-scope" },
+          { id: "app-lists" }
         ]
       },
       {
@@ -46,10 +46,10 @@
         modules: [
           { id: "inv-classes" },
           { id: "inv-inheritance" },
-          { id: "inv-overloading", soon: true, title: T("Same name, different jobs", "Mismo nombre, distintos trabajos", "Stesso nome, lavori diversi") },
-          { id: "inv-encapsulation", soon: true, title: T("Encapsulation", "Encapsulamiento", "Incapsulamento") },
-          { id: "inv-interfaces", soon: true, title: T("Interfaces", "Interfaces", "Interfacce") },
-          { id: "inv-polymorphism", soon: true, title: T("Polymorphism", "Polimorfismo", "Polimorfismo") }
+          { id: "inv-overloading" },
+          { id: "inv-encapsulation" },
+          { id: "inv-interfaces" },
+          { id: "inv-polymorphism" }
         ]
       }
     ],

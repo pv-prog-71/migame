@@ -12,7 +12,7 @@
   --code-type: #8fd8ff;
   --code-ann: #d9b8ff;
   --code-hl: rgba(255, 201, 60, .22);
-  --blk-move: #4c97ff; --blk-turn: #9966ff; --blk-repeat: #f5a20a;
+  --blk-move: #4c97ff; --blk-turn: #9966ff; --blk-repeat: #f5a20a; --blk-if: #2f9e57; --blk-until: #e0700b;
   --floor: #c9f2d9; --floor-alt: #b8ebcb; --wall: #3f7393; --wall-edge: #174e70;
   --r0: #0a8a8f; --r1: #ef8a00; --r2: #7a4fd6; --r3: #2f9e2b; --r4: #d6457f;
 }
@@ -436,3 +436,13 @@ main { padding-top: 34px; }
 .chunk .chunk-dir { flex: none; font-family: var(--f-body, sans-serif); font-weight: 900; font-size: 1.15rem; line-height: 1; opacity: 1; }
 .zone.target .chunk .chunk-dir { color: #ffd02f; }
 .zone.pool .chunk .chunk-dir { color: #58dce0; }
+
+/* v1.16 condition blocks and several roads */
+.b-ifWall, .b-ifPath { --b: var(--blk-if); }
+.b-until { --b: var(--blk-until); }
+.play-board.multi { display: grid; gap: 12px; }
+.road { display: grid; gap: 4px; border-radius: 20px; padding: 4px; border: 3px solid transparent; }
+.road.active { border-color: var(--sun, #ffd02f); }
+.road-label { font-family: var(--f-display); font-weight: 800; font-size: var(--s-sm); color: var(--muted); }
+.roads-note { margin: 4px 0 0; font-weight: 700; }
+.obj-head .obj-cls { font-weight: 700; opacity: .8; font-size: .75em; margin-left: 6px; }

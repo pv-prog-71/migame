@@ -41,10 +41,10 @@
         viz: {
           type: "memory",
           steps: [
-            { line: 1, note: T("A new dog appears (#1). It's still empty. The variable `rex` points to it.", "Aparece un perro nuevo (#1). Todavía está vacío. La variable `rex` apunta a él.", "Appare un cane nuovo (#1). È ancora vuoto. La variabile `rex` lo indica."), frames: [main({ rex: "@1" })], heap: [dog("@1", "null", "0")] },
+            { line: 1, note: T("A new dog appears. It's still empty. The variable `rex` points to it.", "Aparece un perro nuevo. Todavía está vacío. La variable `rex` apunta a él.", "Appare un cane nuovo. È ancora vuoto. La variabile `rex` lo indica."), frames: [main({ rex: "@1" })], heap: [dog("@1", "null", "0")] },
             { line: 2, note: T("`rex.name` means: the name **of** the dog that `rex` points to.", "`rex.name` significa: el nombre **del** perro al que apunta `rex`.", "`rex.name` significa: il nome **del** cane indicato da `rex`."), frames: [main({ rex: "@1" })], heap: [dog("@1", "\"Rex\"", "0")] },
             { line: 3, note: T("Same dog, now with an age.", "El mismo perro, ahora con edad.", "Lo stesso cane, ora con un'età."), frames: [main({ rex: "@1" })], heap: [dog("@1", "\"Rex\"", "3")] },
-            { line: 4, note: T("A second `new`: a second, separate dog (#2).", "Un segundo `new`: un segundo perro, distinto (#2).", "Un secondo `new`: un secondo cane, separato (#2)."), frames: [main({ rex: "@1", luna: "@2" })], heap: [dog("@1", "\"Rex\"", "3"), dog("@2", "null", "0")] },
+            { line: 4, note: T("A second `new`: a second, separate dog. It has no name yet.", "Un segundo `new`: un segundo perro, distinto. Todavía no tiene nombre.", "Un secondo `new`: un secondo cane, separato. Non ha ancora un nome."), frames: [main({ rex: "@1", luna: "@2" })], heap: [dog("@1", "\"Rex\"", "3"), dog("@2", "null", "0")] },
             { line: 5, note: T("Naming Luna doesn't change Rex. Each dog has its own fields.", "Poner nombre a Luna no cambia a Rex. Cada perro tiene sus propios atributos.", "Dare un nome a Luna non cambia Rex. Ogni cane ha i suoi attributi."), frames: [main({ rex: "@1", luna: "@2" })], heap: [dog("@1", "\"Rex\"", "3"), dog("@2", "\"Luna\"", "0")] },
             { line: 6, note: T("Print Rex's name. Done!", "Imprime el nombre de Rex. ¡Listo!", "Stampa il nome di Rex. Fatto!"), frames: [main({ rex: "@1", luna: "@2" })], heap: [dog("@1", "\"Rex\"", "3"), dog("@2", "\"Luna\"", "0")], out: ["Rex"] }
           ]

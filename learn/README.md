@@ -127,6 +127,17 @@ blocks: ["move", "turnLeft", "turnRight", "repeat"],   // blocchi disponibili
 maxBlocks: 5                                           // limite di blocchi
 ```
 
+Blocchi con le condizioni (missione «Se questo, allora quello»):
+
+```js
+{ "if": "wall", do: ["turnRight"] }       // se c'è un muro davanti
+{ "if": "path", do: ["move"] }            // se la strada è libera
+{ until: "flag", do: [...] }              // ripeti fino alla bandiera
+blocks: ["move", "turnLeft", "turnRight", "repeat", "ifWall", "ifPath", "until"]
+```
+
+Con `maps: [mappa1, mappa2, …]` al posto di `map`, lo **stesso programma** deve funzionare su tutte le strade (vale anche per le demo della teoria).
+
 Per vincere Bit deve finire sulla bandiera dopo aver preso tutte le stelle. Qualsiasi soluzione valida va bene: `solution` serve solo per il pulsante "Mostra la risposta". Nelle schede di teoria puoi mostrare una demo con `viz: { type: "grid", map, program }`.
 
 Nei moduli Esploratore i testi sono in tre lingue con la scorciatoia `T("inglese", "spagnolo", "italiano")`.

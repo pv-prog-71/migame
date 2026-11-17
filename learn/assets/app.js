@@ -21,7 +21,7 @@
   /* ---------- interface text (3 languages) ---------- */
   var UI = {
     en: {
-      missionN: "Mission {n}", orderProg: "Your program · click a piece to take it out", orderPieces: "Pieces · click a piece to add it to the program", orderIn: "Add to the program", orderOut: "Take out of the program", lineHint: "Not yet: the values are right, but with println, unlike print, the program prints on a new line.", markedWrong: "Not yet: check the parts marked with ✗.", caseHint: "Remember: words must be written exactly as expected, capital and small letters included.", newPart: "New part for your robot", parts: "Robot parts", partsHow: "Every mission you complete adds a part to your robot.", partFrom: "{l} · mission {n}", medalsHow: "Medals give you extra experience.", xpExp: "Experience", nextTitle: "Next mission", demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "**→ Dog 1** means: this variable points to the object *Dog 1* (same colour).", worldN: "Level {n}", nextCard: "Next step", lockedWorld: "Finish {w} to unlock this level, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Missions",
+      missionN: "Mission {n}", w_ifWall: "if there's a wall ahead", w_ifPath: "if the way ahead is clear", w_until: "repeat until the flag", res_loop: "Bit keeps going and never reaches the flag. Check what's inside the loop.", roadN: "Road {n}", sameProgram: "One program for all the roads: it must work on each of them.", orderProg: "Your program · click a piece to take it out", orderPieces: "Pieces · click a piece to add it to the program", orderIn: "Add to the program", orderOut: "Take out of the program", lineHint: "Not yet: the values are right, but with println, unlike print, the program prints on a new line.", markedWrong: "Not yet: check the parts marked with ✗.", caseHint: "Remember: words must be written exactly as expected, capital and small letters included.", newPart: "New part for your robot", parts: "Robot parts", partsHow: "Every mission you complete adds a part to your robot.", partFrom: "{l} · mission {n}", medalsHow: "Medals give you extra experience.", xpExp: "Experience", nextTitle: "Next mission", demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "The arrow **→** means: this variable points to that object (same colour).", worldN: "Level {n}", nextCard: "Next step", lockedWorld: "Finish {w} to unlock this level, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Missions",
       yourRobot: "Your robot", memStart: "Ready! The program hasn't started yet. Press **Next line ▶** to run the first line.", memNext: "Next line", memMain: "Program", memTemp: "temporary: they disappear at the end", memNoVars: "no variables yet", memOut: "What the program prints",
       starsText: "{n} of 3 stars", starsHow: "1 star: finish the mission. 2 stars: without using “Show the answer”. 3 stars: beat the boss with no mistakes and no hints.", placeUnlocked: "Unlocked levels",
       run: "Run ▶", play: "Play", clear: "Clear", blocksLabel: "Blocks: tap to add", dropMain: "Tap a block above to start", dropInside: "Tap a block to put it inside", addHere: "New blocks go here",
@@ -60,7 +60,7 @@
       modulesCount: "{n} missions", ofTotal: "{a} of {b}"
     },
     es: {
-      missionN: "Misión {n}", orderProg: "Tu programa · haz clic en una pieza para quitarla", orderPieces: "Piezas · haz clic en una pieza para añadirla al programa", orderIn: "Añadir al programa", orderOut: "Quitar del programa", lineHint: "Todavía no: los valores son correctos, pero con println, a diferencia de print, el programa escribe en una línea nueva.", markedWrong: "Todavía no: revisa las partes marcadas con ✗.", caseHint: "Recuerda: las palabras se escriben exactamente como se espera, distinguiendo mayúsculas y minúsculas.", newPart: "Pieza nueva para tu robot", parts: "Piezas del robot", partsHow: "Cada misión que completas añade una pieza a tu robot.", partFrom: "{l} · misión {n}", medalsHow: "Las medallas te dan experiencia extra.", xpExp: "Experiencia", nextTitle: "Próxima misión", demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "**→ Dog 1** significa: esta variable apunta al objeto *Dog 1* (mismo color).", worldN: "Nivel {n}", nextCard: "Siguiente paso", lockedWorld: "Termina {w} para desbloquear este nivel, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Misiones",
+      missionN: "Misión {n}", w_ifWall: "si hay una pared delante", w_ifPath: "si el camino está libre", w_until: "repetir hasta la bandera", res_loop: "Bit sigue y sigue y nunca llega a la bandera. Revisa lo que hay dentro del bucle.", roadN: "Camino {n}", sameProgram: "Un solo programa para todos los caminos: tiene que funcionar en cada uno.", orderProg: "Tu programa · haz clic en una pieza para quitarla", orderPieces: "Piezas · haz clic en una pieza para añadirla al programa", orderIn: "Añadir al programa", orderOut: "Quitar del programa", lineHint: "Todavía no: los valores son correctos, pero con println, a diferencia de print, el programa escribe en una línea nueva.", markedWrong: "Todavía no: revisa las partes marcadas con ✗.", caseHint: "Recuerda: las palabras se escriben exactamente como se espera, distinguiendo mayúsculas y minúsculas.", newPart: "Pieza nueva para tu robot", parts: "Piezas del robot", partsHow: "Cada misión que completas añade una pieza a tu robot.", partFrom: "{l} · misión {n}", medalsHow: "Las medallas te dan experiencia extra.", xpExp: "Experiencia", nextTitle: "Próxima misión", demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "La flecha **→** significa: esta variable apunta a ese objeto (mismo color).", worldN: "Nivel {n}", nextCard: "Siguiente paso", lockedWorld: "Termina {w} para desbloquear este nivel, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Misiones",
       yourRobot: "Tu robot", memStart: "¡Listo! El programa todavía no ha empezado. Pulsa **Siguiente línea ▶** para ejecutar la primera línea.", memNext: "Siguiente línea", memMain: "Programa", memTemp: "temporales: desaparecen al final", memNoVars: "aún no hay variables", memOut: "Lo que imprime el programa",
       starsText: "{n} de 3 estrellas", starsHow: "1 estrella: terminas la misión. 2 estrellas: sin usar “Ver la respuesta”. 3 estrellas: vences al jefe sin errores ni pistas.", placeUnlocked: "Niveles desbloqueados",
       run: "Ejecutar ▶", play: "Reproducir", clear: "Borrar todo", blocksLabel: "Bloques: toca para añadir", dropMain: "Toca un bloque de arriba para empezar", dropInside: "Toca un bloque para meterlo dentro", addHere: "Los bloques nuevos van aquí",
@@ -99,7 +99,7 @@
       modulesCount: "{n} misiones", ofTotal: "{a} de {b}"
     },
     it: {
-      missionN: "Missione {n}", orderProg: "Il tuo programma · clicca un pezzo per toglierlo", orderPieces: "Pezzi · clicca un pezzo per aggiungerlo al programma", orderIn: "Aggiungi al programma", orderOut: "Togli dal programma", lineHint: "Non ancora: i valori sono giusti, ma con println, invece di print, il programma stampa su una riga nuova.", markedWrong: "Non ancora: rivedi le parti segnate con ✗.", caseHint: "Ricorda: le parole vanno scritte esattamente come previsto, distinguendo maiuscole e minuscole.", newPart: "Nuovo pezzo per il tuo robot", parts: "Pezzi del robot", partsHow: "Ogni missione completata aggiunge un pezzo al tuo robot.", partFrom: "{l} · missione {n}", medalsHow: "Le medaglie ti danno esperienza in più.", xpExp: "Esperienza", nextTitle: "Prossima missione", demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "**→ Dog 1** vuol dire: questa variabile indica l'oggetto *Dog 1* (stesso colore).", worldN: "Livello {n}", nextCard: "Prossimo passo", lockedWorld: "Completa {w} per sbloccare questo livello, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Missioni",
+      missionN: "Missione {n}", w_ifWall: "se c'è un muro davanti", w_ifPath: "se la strada è libera", w_until: "ripeti fino alla bandiera", res_loop: "Bit continua a girare e non arriva mai alla bandiera. Controlla cosa c'è dentro il ciclo.", roadN: "Strada {n}", sameProgram: "Un solo programma per tutte le strade: deve funzionare su ognuna.", orderProg: "Il tuo programma · clicca un pezzo per toglierlo", orderPieces: "Pezzi · clicca un pezzo per aggiungerlo al programma", orderIn: "Aggiungi al programma", orderOut: "Togli dal programma", lineHint: "Non ancora: i valori sono giusti, ma con println, invece di print, il programma stampa su una riga nuova.", markedWrong: "Non ancora: rivedi le parti segnate con ✗.", caseHint: "Ricorda: le parole vanno scritte esattamente come previsto, distinguendo maiuscole e minuscole.", newPart: "Nuovo pezzo per il tuo robot", parts: "Pezzi del robot", partsHow: "Ogni missione completata aggiunge un pezzo al tuo robot.", partFrom: "{l} · missione {n}", medalsHow: "Le medaglie ti danno esperienza in più.", xpExp: "Esperienza", nextTitle: "Prossima missione", demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "La freccia **→** vuol dire: questa variabile indica quell'oggetto (stesso colore).", worldN: "Livello {n}", nextCard: "Prossimo passo", lockedWorld: "Completa {w} per sbloccare questo livello, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Missioni",
       yourRobot: "Il tuo robot", memStart: "Pronti! Il programma non è ancora partito. Premi **Riga successiva ▶** per eseguire la prima riga.", memNext: "Riga successiva", memMain: "Programma", memTemp: "temporanee: spariscono alla fine", memNoVars: "ancora nessuna variabile", memOut: "Cosa stampa il programma",
       starsText: "{n} stelle su 3", starsHow: "1 stella: completi la missione. 2 stelle: senza usare “Mostra la risposta”. 3 stelle: batti il boss senza errori né suggerimenti.", placeUnlocked: "Livelli sbloccati",
       run: "Esegui ▶", play: "Avvia", clear: "Cancella tutto", blocksLabel: "Blocchi: tocca per aggiungere", dropMain: "Tocca un blocco qui sopra per iniziare", dropInside: "Tocca un blocco per metterlo dentro", addHere: "I nuovi blocchi vanno qui",
@@ -860,7 +860,7 @@
       return {
         check: function () {
           if (!ta.value.trim()) return null;
-          var mine = norm(ta.value), right = norm(ex.answer);
+          var mine = norm(ta.value), right = norm(tr(ex.answer));
           if (mine === right) return true;
           /* same values, different line breaks (e.g. "6 7" instead of "6" and "7" on two lines) */
           var flat = function (x) { return x.split(/[\s,;]+/).filter(Boolean).join(" "); };
@@ -868,14 +868,14 @@
           if (mine.toLowerCase() === right.toLowerCase()) return { ok: false, msg: t("caseHint") };
           return false;
         },
-        reveal: function () { ta.value = ex.answer; },
+        reveal: function () { ta.value = tr(ex.answer); },
         lock: function () { ta.readOnly = true; }
       };
     },
 
     order: function (body, ex) {
-      var lines = ex.lines.slice();
-      var all = lines.concat(ex.extra || []).map(function (text, i) { return { text: text, i: i }; });
+      var lines = ex.lines.map(tr);
+      var all = lines.concat((ex.extra || []).map(tr)).map(function (text, i) { return { text: text, i: i }; });
       var pool = shuffle(all), picked = [], locked = false;
       if (pool.length > 1) {
         var tries = 0;
@@ -908,7 +908,7 @@
         },
         reveal: function () {
           picked = lines.map(function (text) { return { text: text }; });
-          pool = (ex.extra || []).map(function (text) { return { text: text }; });
+          pool = (ex.extra || []).map(function (text) { return { text: tr(text) }; });
           draw();
         },
         lock: function () { locked = true; }
@@ -990,7 +990,7 @@
         inp.setAttribute("autocapitalize", "off");
         inp.setAttribute("autocomplete", "off");
         inp.spellcheck = false;
-        inp._answers = String(r.answer).split("|");
+        inp._answers = String(tr(r.answer)).split("|");
         grid.appendChild(lab); grid.appendChild(inp);
         inputs.push(inp);
       });
@@ -1063,40 +1063,74 @@
   }
   function blocked(m, x, y) { return x < 0 || y < 0 || x >= m.w || y >= m.h || m.rows[y].charAt(x) === "" || !!m.walls[x + "," + y]; }
   var uid = 0;
+  /* Blocks that hold other blocks:
+       { repeat: 3, do: [...] }        repeat n times
+       { if: "wall", do: [...] }       only if there is a wall in front of Bit
+       { if: "path", do: [...] }       only if the square in front is free
+       { until: "flag", do: [...] }    repeat until Bit is on the flag */
+  var CONTAINER = { repeat: 1, ifWall: 1, ifPath: 1, until: 1 };
   function normProg(spec) {
     return (spec || []).map(function (s) {
       if (typeof s === "string") return { id: ++uid, op: s };
-      return { id: ++uid, op: "repeat", n: s.repeat, body: normProg(s["do"]) };
+      if (s.repeat) return { id: ++uid, op: "repeat", n: s.repeat, body: normProg(s["do"]) };
+      if (s["if"]) return { id: ++uid, op: s["if"] === "wall" ? "ifWall" : "ifPath", body: normProg(s["do"]) };
+      return { id: ++uid, op: "until", body: normProg(s["do"]) };
     });
   }
-  function countBlocks(p) { return p.reduce(function (a, n) { return a + 1 + (n.op === "repeat" ? countBlocks(n.body) : 0); }, 0); }
-  function flatten(p, out) {
-    p.forEach(function (n) {
-      if (out.length > 400) return;
-      if (n.op === "repeat") { for (var i = 0; i < n.n; i++) flatten(n.body, out); } else out.push(n);
-    });
-    return out;
-  }
+  function countBlocks(p) { return p.reduce(function (a, n) { return a + 1 + (CONTAINER[n.op] ? countBlocks(n.body) : 0); }, 0); }
+  /* runs the program on a map, step by step (conditions are checked while Bit moves) */
   function simulate(m, prog) {
     var s = { x: m.start.x, y: m.start.y, dir: m.start.dir, got: {} };
-    var steps = [], acts = flatten(prog, []).slice(0, 400), crash = false;
-    for (var i = 0; i < acts.length; i++) {
-      var a = acts[i];
-      if (a.op === "turnLeft") s.dir = (s.dir + 3) % 4;
-      else if (a.op === "turnRight") s.dir = (s.dir + 1) % 4;
-      else if (a.op === "move") {
-        var nx = s.x + DX[s.dir], ny = s.y + DY[s.dir];
-        if (blocked(m, nx, ny)) { crash = true; steps.push({ x: s.x, y: s.y, dir: s.dir, got: Object.assign({}, s.got), node: a, bump: true }); break; }
-        s.x = nx; s.y = ny;
-        if (m.stars.indexOf(nx + "," + ny) >= 0) s.got[nx + "," + ny] = 1;
+    var steps = [], crash = false, loop = false;
+    var snap = function (node, extra) { var o = { x: s.x, y: s.y, dir: s.dir, got: Object.assign({}, s.got), node: node }; for (var k in extra) o[k] = extra[k]; return o; };
+    var stop = function () { return crash || loop || steps.length >= 400; };
+    var wallAhead = function () { return blocked(m, s.x + DX[s.dir], s.y + DY[s.dir]); };
+    function exec(list) {
+      for (var i = 0; i < list.length && !stop(); i++) {
+        var a = list[i];
+        if (a.op === "repeat") { for (var r = 0; r < a.n && !stop(); r++) exec(a.body); }
+        else if (a.op === "ifWall" || a.op === "ifPath") {
+          var yes = a.op === "ifWall" ? wallAhead() : !wallAhead();
+          steps.push(snap(a, { check: true }));
+          if (yes) exec(a.body);
+        } else if (a.op === "until") {
+          var turns = 0;
+          while (!stop() && s.x + "," + s.y !== m.flag) {
+            if (++turns > 60) { loop = true; break; }
+            steps.push(snap(a, { check: true }));
+            var before = steps.length;
+            exec(a.body);
+            if (steps.length === before) { loop = true; break; }
+          }
+        } else {
+          if (a.op === "turnLeft") s.dir = (s.dir + 3) % 4;
+          else if (a.op === "turnRight") s.dir = (s.dir + 1) % 4;
+          else if (a.op === "move") {
+            var nx = s.x + DX[s.dir], ny = s.y + DY[s.dir];
+            if (blocked(m, nx, ny)) { crash = true; steps.push(snap(a, { bump: true })); return; }
+            s.x = nx; s.y = ny;
+            if (m.stars.indexOf(nx + "," + ny) >= 0) s.got[nx + "," + ny] = 1;
+          }
+          steps.push(snap(a));
+        }
       }
-      steps.push({ x: s.x, y: s.y, dir: s.dir, got: Object.assign({}, s.got), node: a });
     }
-    var last = steps[steps.length - 1] || { x: m.start.x, y: m.start.y, got: {} };
-    var result = crash ? "wall" : (last.x + "," + last.y !== m.flag ? "noflag" : (Object.keys(last.got).length < m.stars.length ? "stars" : "ok"));
+    exec(prog);
+    if (steps.length >= 400 && !crash) loop = true;
+    var last = { x: s.x, y: s.y, got: s.got };
+    var result = crash ? "wall" : loop ? "loop" : (last.x + "," + last.y !== m.flag ? "noflag" : (Object.keys(last.got).length < m.stars.length ? "stars" : "ok"));
     return { steps: steps, result: result };
   }
-  MG._simulate = function (map, spec) { return simulate(parseMap(map), normProg(spec)).result; };
+  /* several roads, same program: ok only if it works on all of them */
+  function simulateAll(ms, prog) {
+    var runs = ms.map(function (m) { return simulate(m, prog); });
+    var bad = -1;
+    runs.forEach(function (r, i) { if (bad < 0 && r.result !== "ok") bad = i; });
+    return { runs: runs, bad: bad, result: bad < 0 ? "ok" : runs[bad].result };
+  }
+  function mapsOf(o) { return (o.maps || [o.map]).map(parseMap); }
+  MG._simulate = function (map, spec) { return simulateAll((Array.isArray(map[0]) ? map : [map]).map(parseMap), normProg(spec)).result; };
+  MG._countBlocks = function (spec) { return countBlocks(normProg(spec)); };
 
   var SVG_BOT = '<svg viewBox="0 0 40 40" aria-hidden="true"><path d="M31 14 L39 20 L31 26 Z" fill="var(--c6)"/><rect x="4" y="5" width="28" height="30" rx="10" fill="var(--bot)"/><rect x="8" y="9" width="20" height="22" rx="7" fill="var(--bot-face)"/><circle cx="22" cy="15" r="3.6" fill="#fff"/><circle cx="22" cy="25" r="3.6" fill="#fff"/><circle cx="23.3" cy="15" r="1.8" fill="#14202a"/><circle cx="23.3" cy="25" r="1.8" fill="#14202a"/><circle cx="9" cy="20" r="2.4" fill="var(--c5)"/></svg>';
   var SVG_STAR = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.8 6 6.5.7-4.9 4.4 1.4 6.4L12 16.8 6.2 20l1.4-6.4L2.7 9.2l6.5-.7z" fill="var(--c6)" stroke="var(--star-edge)" stroke-width="1.2" stroke-linejoin="round"/></svg>';
@@ -1105,7 +1139,10 @@
     move: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     turnLeft: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 7H15a5 5 0 010 10h-3M9 3L5 7l4 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
     turnRight: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 7H9a5 5 0 000 10h3M15 3l4 4-4 4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>',
-    repeat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11V9a4 4 0 014-4h11M16 2l3 3-3 3M20 13v2a4 4 0 01-4 4H5M8 22l-3-3 3-3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    repeat: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11V9a4 4 0 014-4h11M16 2l3 3-3 3M20 13v2a4 4 0 01-4 4H5M8 22l-3-3 3-3" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+    ifWall: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3zM3 12h18M9 5v7M15 12v7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/></svg>',
+    ifPath: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 21L10 3M16 21L14 3M12 6v2M12 11v2M12 16v2" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>',
+    until: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3v18" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M7 4h11l-3 4 3 4H7z" fill="currentColor"/></svg>'
   };
 
   function board(m) {
@@ -1151,9 +1188,10 @@
     depth = depth || 0;
     var ind = new Array(depth + 1).join("    "), out = [];
     p.forEach(function (n) {
-      if (n.op === "repeat") {
+      if (CONTAINER[n.op]) {
         var v = "ijk"[depth] || "n";
-        out.push(ind + (mode === "java" ? "for (int " + v + " = 0; " + v + " < " + n.n + "; " + v + "++) {" : t("w_repeat", { n: n.n }) + ":"));
+        var JAVA = { repeat: "for (int " + v + " = 0; " + v + " < " + n.n + "; " + v + "++) {", ifWall: "if (bit.wallAhead()) {", ifPath: "if (bit.pathAhead()) {", until: "while (!bit.atFlag()) {" };
+        out.push(ind + (mode === "java" ? JAVA[n.op] : t("w_" + n.op, { n: n.n }) + ":"));
         out = out.concat(progText(n.body, mode, depth + 1));
         if (mode === "java") out.push(ind + "}");
       } else out.push(ind + (mode === "java" ? "bit." + n.op + "();" : t("w_" + n.op)));
@@ -1173,9 +1211,9 @@
         b.type = "button";
         b.addEventListener("click", function () {
           if (locked) return;
-          var nd = op === "repeat" ? { id: ++uid, op: "repeat", n: 3, body: [] } : { id: ++uid, op: op };
+          var nd = op === "repeat" ? { id: ++uid, op: "repeat", n: 3, body: [] } : CONTAINER[op] ? { id: ++uid, op: op, body: [] } : { id: ++uid, op: op };
           (target ? target.body : prog).push(nd);
-          if (op === "repeat") target = nd;
+          if (CONTAINER[op]) target = nd;
           changed();
         });
         pal.appendChild(b);
@@ -1243,6 +1281,20 @@
       return x;
     }
     function blockEl(nd, arr, i) {
+      if (CONTAINER[nd.op] && nd.op !== "repeat") {
+        var cw = h("div", "blk b-" + nd.op + " rep");
+        cw.dataset.id = nd.id;
+        var ch = h("div", "rep-head", ICON[nd.op]);
+        ch.appendChild(h("span", null, esc(t("w_" + nd.op))));
+        if (!ro) {
+          ch.appendChild(removeBtn(arr, i, nd));
+          ch.addEventListener("click", function () { if (locked) return; target = nd; draw(); });
+        }
+        cw.appendChild(ch);
+        cw.appendChild(list(nd.body, nd));
+        cw.appendChild(h("div", "rep-foot"));
+        return cw;
+      }
       if (nd.op === "repeat") {
         var w = h("div", "blk b-repeat rep");
         w.dataset.id = nd.id;
@@ -1297,19 +1349,52 @@
       var s = steps[i++];
       bd.place(s);
       ed.highlight(s.node);
-      setTimeout(tick, s.bump ? 600 : 420);
+      setTimeout(tick, s.bump ? 600 : s.check ? 260 : 420);
     }
     setTimeout(tick, 250);
   }
 
+  /* one board, or one board per road when the same program must work on several maps */
+  function boards(ms) {
+    var wrap = h("div", "play-board" + (ms.length > 1 ? " multi" : ""));
+    var list = ms.map(function (m, i) {
+      var bd = board(m);
+      if (ms.length > 1) {
+        var fig = h("div", "road");
+        fig.appendChild(h("div", "road-label", esc(t("roadN", { n: i + 1 }))));
+        fig.appendChild(bd.el);
+        wrap.appendChild(fig);
+        bd.fig = fig;
+      } else wrap.appendChild(bd.el);
+      return bd;
+    });
+    return { el: wrap, list: list, reset: function () { list.forEach(function (b) { b.reset(); }); } };
+  }
+  /* plays the runs one road after the other, stopping at the first road that fails */
+  function animateAll(bs, ed, sims, done) {
+    var i = 0;
+    bs.reset();
+    function next() {
+      if (i >= sims.runs.length || (sims.bad >= 0 && i > sims.bad)) { done(); return; }
+      var k = i++;
+      bs.list.forEach(function (b, j) { if (b.fig) b.fig.classList.toggle("active", j === k); });
+      animate(bs.list[k], ed, sims.runs[k].steps, next);
+    }
+    next();
+  }
+  function resultMsg(sims) {
+    var m = t("res_" + sims.result);
+    return sims.runs.length > 1 ? t("roadN", { n: sims.bad + 1 }) + ": " + m : m;
+  }
+
   TYPES.grid = function (body, ex) {
-    var m = parseMap(ex.map);
+    var ms = mapsOf(ex);
     var wrap = h("div", "play");
-    var bd = board(m);
-    var left = h("div", "play-board");
-    left.appendChild(bd.el);
+    var bs = boards(ms);
+    var left = bs.el;
     var running = false;
-    var ed = editor({ palette: ex.blocks || ["move", "turnLeft", "turnRight"], program: [], max: ex.maxBlocks, onChange: function () { if (!running) bd.reset(); } });
+    var ed = editor({ palette: ex.blocks || ["move", "turnLeft", "turnRight"], program: [], max: ex.maxBlocks, onChange: function () { if (!running) bs.reset(); } });
+    if (ms.length > 1) body.appendChild(h("p", "muted roads-note", esc(t("sameProgram"))));
     wrap.appendChild(left);
     wrap.appendChild(ed.el);
     body.appendChild(wrap);
@@ -1319,16 +1404,16 @@
       check: function () {
         var p = ed.get();
         if (!countBlocks(p)) return null;
-        var sim = simulate(m, p);
+        var sims = simulateAll(ms, p);
         running = true;
         ed.lock(true);
         return new Promise(function (res) {
-          animate(bd, ed, sim.steps, function () {
+          animateAll(bs, ed, sims, function () {
             running = false;
             ed.lock(false);
             var tooMany = ex.maxBlocks && countBlocks(p) > ex.maxBlocks;
-            if (sim.result === "ok" && !tooMany) res(true);
-            else res({ ok: false, msg: sim.result === "ok" ? t("tooMany", { n: ex.maxBlocks }) : t("res_" + sim.result) });
+            if (sims.result === "ok" && !tooMany) res(true);
+            else res({ ok: false, msg: sims.result === "ok" ? t("tooMany", { n: ex.maxBlocks }) : resultMsg(sims) });
           });
         });
       },
@@ -1336,18 +1421,17 @@
         ed.set(normProg(ex.solution));
         ed.lock(true);
         running = true;
-        animate(bd, ed, simulate(m, ed.get()).steps, function () { running = false; });
+        animateAll(bs, ed, simulateAll(ms, ed.get()), function () { running = false; });
       },
       lock: function () { ed.lock(true); }
     };
   };
 
   function gridDemo(viz) {
-    var m = parseMap(viz.map);
+    var ms = mapsOf(viz);
     var wrap = h("div", "play demo");
-    var bd = board(m);
-    var left = h("div", "play-board");
-    left.appendChild(bd.el);
+    var bs = boards(ms);
+    var left = bs.el;
     var ed = editor({ program: normProg(viz.program), readonly: true });
     var row = h("div", "row");
     var msg = h("span", "demo-msg");
@@ -1356,11 +1440,11 @@
       play.disabled = true;
       msg.textContent = "";
       msg.className = "demo-msg";
-      var sim = simulate(m, ed.get());
-      animate(bd, ed, sim.steps, function () {
+      var sims = simulateAll(ms, ed.get());
+      animateAll(bs, ed, sims, function () {
         play.disabled = false;
-        msg.textContent = sim.result === "ok" ? t("demoOk") : t("res_" + sim.result);
-        msg.className = "demo-msg " + (sim.result === "ok" ? "ok" : "bad");
+        msg.textContent = sims.result === "ok" ? t("demoOk") : resultMsg(sims);
+        msg.className = "demo-msg " + (sims.result === "ok" ? "ok" : "bad");
       });
     });
     row.appendChild(play);
@@ -1374,14 +1458,27 @@
   /* ---------- visualizations ---------- */
   function refNum(v) { return parseInt(String(v).slice(1), 10) || 1; }
   function refClass(v) { return "rc" + ((refNum(v) - 1) % 5); }
+  /* How an object is called on screen: by its name field ("Rex") when it has one,
+     otherwise by its class ("Dog"). A number is added only if two objects would look the same. */
+  function objLabel(o, heap) {
+    if (!o) return "?";
+    var nm = function (x) { var v = x.fields && x.fields.name; return v && v !== "null" ? String(v).replace(/^"(.*)"$/, "$1") : x.cls; };
+    var me = nm(o), same = (heap || []).filter(function (x) { return nm(x) === me; });
+    return same.length > 1 ? me + " " + (same.indexOf(o) + 1) : me;
+  }
   function valHtml(v, heap) {
     if (v === null || v === undefined) return "null";
     var s = String(v);
     if (/^@\d+$/.test(s)) {
       var o = (heap || []).filter(function (x) { return x.id === s; })[0];
-      return '<span class="ref ' + refClass(s) + '">→ ' + esc((o ? o.cls + " " : "#") + refNum(s)) + "</span>";
+      return '<span class="ref ' + refClass(s) + '">→ ' + esc(objLabel(o, heap)) + "</span>";
     }
     return esc(s);
+  }
+  /* a frame's variables, or { en: {...}, es: {...}, it: {...} } when the names change with the language */
+  function fvars(f) {
+    var v = f.vars || {};
+    return v.en && typeof v.en === "object" ? (v[S.lang] || v.en) : v;
   }
   function memoryViz(code, viz) {
     var steps = [{ line: 0, start: true, frames: [{ name: "main", vars: {} }], heap: [] }].concat(viz.steps), i = 0;
@@ -1412,15 +1509,15 @@
       codeHost.appendChild(codeBlock(code, { hl: s.line }));
       note.innerHTML = mdInline(s.start ? t("memStart") : tr(s.note || ""));
       var pv = {};
-      (p.frames || []).forEach(function (f) { pv[tr(f.name)] = f.vars || {}; });
+      (p.frames || []).forEach(function (f) { pv[tr(f.name)] = fvars(f); });
       var hasRef = JSON.stringify(s.frames || []).indexOf('"@') >= 0;
       vars.innerHTML = "<h4>" + esc(t("variables")) + "</h4>" + (hasRef ? '<p class="arrow-help">' + mdInline(t("memArrow")) + "</p>" : "") + (s.frames || []).map(function (f, fi) {
-        var old = pv[tr(f.name)] || {};
-        var keys = Object.keys(f.vars || {});
+        var old = pv[tr(f.name)] || {}, fv = fvars(f);
+        var keys = Object.keys(fv);
         return '<div class="frame' + (fi > 0 ? " temp" : "") + '"><div class="frame-name">' + esc(f.name === "main" ? t("memMain") : tr(f.name)) + (fi > 0 ? " · " + esc(t("memTemp")) : "") + '</div><div class="vars">' +
           (keys.length ? keys.map(function (k) {
-            var chg = i > 0 && old[k] !== f.vars[k];
-            return '<span class="var' + (chg ? " chg" : "") + '"><b>' + esc(k) + "</b><span>" + valHtml(f.vars[k], s.heap) + "</span></span>";
+            var chg = i > 0 && old[k] !== fv[k];
+            return '<span class="var' + (chg ? " chg" : "") + '"><b>' + esc(k) + "</b><span>" + valHtml(fv[k], s.heap) + "</span></span>";
           }).join("") : '<span class="empty-note">' + esc(t("memNoVars")) + "</span>") + "</div></div>";
       }).join("");
       var ph = {};
@@ -1429,13 +1526,14 @@
       objs.innerHTML = "<h4>" + esc(t("objects")) + "</h4>" + (heap.length ? '<div class="objs">' + heap.map(function (o) {
         var pf = ph[o.id];
         var keys = Object.keys(o.fields || {});
-        return '<div class="obj ' + refClass(o.id) + '"><div class="obj-head"><span>' + esc(o.cls + " " + refNum(o.id)) + "</span></div>" +
+        var lb = objLabel(o, heap);
+        return '<div class="obj ' + refClass(o.id) + '"><div class="obj-head"><span>' + esc(lb) + (lb !== o.cls && lb.indexOf(o.cls + " ") !== 0 ? ' <small class="obj-cls">' + esc(o.cls) + "</small>" : "") + "</span></div>" +
           (keys.length ? keys.map(function (k) {
             var chg = i > 0 && (!pf || pf[k] !== o.fields[k]);
             return '<div class="kv' + (chg ? " chg" : "") + '"><b>' + esc(k) + "</b><span>" + valHtml(o.fields[k], s.heap) + "</span></div>";
           }).join("") : '<div class="kv"><span class="empty-note">—</span></div>') + "</div>";
       }).join("") + "</div>" : '<div class="empty-note">' + esc(t("noObjects")) + "</div>");
-      cons.innerHTML = '<span class="console-label">' + esc(t("memOut")) + "</span>" + esc((s.out || []).join("\n") || " ");
+      cons.innerHTML = '<span class="console-label">' + esc(t("memOut")) + "</span>" + esc((s.out || []).map(tr).join("\n") || " ");
       count.textContent = i === 0 ? "" : t("step", { i: i, n: steps.length - 1 });
       prev.disabled = i === 0;
       next.innerHTML = last ? "↺ " + esc(t("restart")) : esc(t("memNext")) + " ▶";
@@ -1453,7 +1551,7 @@
         var ov = mb.charAt(0) === "^";
         return "<li><span>" + esc(ov ? mb.slice(1) : mb) + "</span>" + (ov ? '<span class="tag-ov">override</span>' : "") + "</li>";
       }).join("");
-      e.innerHTML = '<div class="cls"><div class="cls-name">' + esc(n.name) + (n.parent ? " <small>extends " + esc(n.parent) + "</small>" : "") + "</div>" + (members ? "<ul>" + members + "</ul>" : "") + "</div>";
+      e.innerHTML = '<div class="cls"><div class="cls-name">' + esc(n.name) + (n.parent ? " <small>" + (/«interface»/.test(n.parent) ? "implements " : "extends ") + esc(n.parent.replace("«interface» ", "")) + "</small>" : "") + "</div>" + (members ? "<ul>" + members + "</ul>" : "") + "</div>";
       var ch = kids(n.name);
       if (ch.length) { var ul = h("ul"); ch.forEach(function (c) { ul.appendChild(li(c)); }); e.appendChild(ul); }
       return e;
