@@ -173,7 +173,7 @@
       },
       {
         id: "p5", type: "trace",
-        q: T("Fill in the values at the end.", "Escribe los valores al final.", "Scrivi i valori alla fine."),
+        q: T("How much is each variable worth when the program ends? Write the values in the boxes.", "¿Cuánto vale cada variable cuando termina el programa? Escribe los valores en las casillas.", "Quanto vale ogni variabile quando il programma finisce? Scrivi i valori nelle caselle."),
         code: "int a = 3;\nint b = a + 2;\na = 10;\nb = b * 2;",
         rows: [
           { label: "`a`", answer: "10" },

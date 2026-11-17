@@ -430,3 +430,9 @@ main { padding-top: 34px; }
 .opt.bad::after { content: "✗"; color: var(--coral); }
 .code .l.good::after { content: "  ✓"; color: #50d282; font-weight: 900; }
 .code .l.bad::after { content: "  ✗"; color: #ff6e5a; font-weight: 900; }
+/* v1.15 order pieces: code + direction arrow */
+.chunk { display: flex; align-items: center; gap: 10px; }
+.chunk .chunk-code { flex: 1; min-width: 0; overflow-x: auto; white-space: pre; }
+.chunk .chunk-dir { flex: none; font-family: var(--f-body, sans-serif); font-weight: 900; font-size: 1.15rem; line-height: 1; opacity: 1; }
+.zone.target .chunk .chunk-dir { color: #ffd02f; }
+.zone.pool .chunk .chunk-dir { color: #58dce0; }

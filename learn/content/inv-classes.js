@@ -183,7 +183,7 @@
       },
       {
         id: "p5", type: "trace",
-        q: T("Follow the arrows. Fill in the values at the end.", "Sigue las flechas. Escribe los valores al final.", "Segui le frecce. Scrivi i valori alla fine."),
+        q: T("Follow the arrows. How much is each one worth when the program ends? Write the values in the boxes.", "Sigue las flechas. ¿Cuánto vale cada uno cuando termina el programa? Escribe los valores en las casillas.", "Segui le frecce. Quanto vale ognuno quando il programma finisce? Scrivi i valori nelle caselle."),
         code: "class Counter {\n    int count;\n    void add() { count = count + 1; }\n}\n\nCounter c = new Counter();\nc.add();\nc.add();\nCounter d = c;\nd.add();",
         rows: [
           { label: "`c.count`", answer: "3" },
