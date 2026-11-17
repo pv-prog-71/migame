@@ -84,7 +84,7 @@
           type: "memory",
           steps: [
             { line: 1, note: T("The variable is an `Animal`, but the object is a `Dog`.", "La variable es un `Animal`, pero el objeto es un `Dog`.", "La variabile è un `Animal`, ma l'oggetto è un `Dog`."), frames: [main({ a: "@1" })], heap: [{ id: "@1", cls: "Dog", fields: {} }] },
-            { line: 2, note: T("Java follows the arrow, finds a Dog, and runs the Dog's `speak()`.", "Java sigue la flecha, encuentra un Dog y ejecuta el `speak()` de Dog.", "Java segue la freccia, trova un Dog e usa lo `speak()` di Dog."), frames: [main({ a: "@1" })], heap: [{ id: "@1", cls: "Dog", fields: {} }], out: ["Woof"] },
+            { line: 2, note: T("Java follows the reference, finds a Dog, and runs the Dog's `speak()`.", "Java sigue la referencia, encuentra un Dog y ejecuta el `speak()` de Dog.", "Java segue il riferimento, trova un Dog e usa lo `speak()` di Dog."), frames: [main({ a: "@1" })], heap: [{ id: "@1", cls: "Dog", fields: {} }], out: ["Woof"] },
             { line: 3, note: T("Same variable, now pointing to a Cat.", "La misma variable, ahora apunta a un Cat.", "Stessa variabile, ora indica un Cat."), frames: [main({ a: "@2" })], heap: [{ id: "@2", cls: "Cat", fields: {} }], out: ["Woof"] },
             { line: 4, note: T("Same line of code, different object, different sound!", "¡La misma línea de código, otro objeto, otro sonido!", "Stessa riga di codice, oggetto diverso, verso diverso!"), frames: [main({ a: "@2" })], heap: [{ id: "@2", cls: "Cat", fields: {} }], out: ["Woof", "Meow"] }
           ]

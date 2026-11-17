@@ -33,9 +33,9 @@
       {
         title: T("Build objects with new", "Construye objetos con new", "Costruisci oggetti con new"),
         text: T(
-          "`new Dog()` builds a real dog in memory. The variable `rex` doesn't contain the dog: it **points** to it, like an arrow.\n\nPress **Next line** and watch what each line does.",
-          "`new Dog()` construye un perro de verdad en la memoria. La variable `rex` no contiene el perro: **apunta** a él, como una flecha.\n\nPulsa **Siguiente línea** y mira qué hace cada línea.",
-          "`new Dog()` costruisce un cane vero nella memoria. La variabile `rex` non contiene il cane: lo **indica**, come una freccia.\n\nPremi **Riga successiva** e guarda cosa fa ogni riga."
+          "`new Dog()` builds a real dog in memory. The variable `rex` doesn't contain the dog: it contains a **reference** to it, a bit like the address of a house. In the drawing the reference is the arrow **→**.\n\nPress **Next line** and watch what each line does.",
+          "`new Dog()` construye un perro de verdad en la memoria. La variable `rex` no contiene el perro: contiene una **referencia** a él, un poco como la dirección de una casa. En el dibujo la referencia es la flecha **→**.\n\nPulsa **Siguiente línea** y mira qué hace cada línea.",
+          "`new Dog()` costruisce un cane vero nella memoria. La variabile `rex` non contiene il cane: contiene un **riferimento** al cane, un po' come l'indirizzo di una casa. Nel disegno il riferimento è la freccia **→**.\n\nPremi **Riga successiva** e guarda cosa fa ogni riga."
         ),
         code: "Dog rex = new Dog();\nrex.name = \"Rex\";\nrex.age = 3;\nDog luna = new Dog();\nluna.name = \"Luna\";\nSystem.out.println(rex.name);",
         viz: {
@@ -83,18 +83,18 @@
         )
       },
       {
-        title: T("Two arrows, one dog", "Dos flechas, un perro", "Due frecce, un cane"),
+        title: T("Two references, one dog", "Dos referencias, un perro", "Due riferimenti, un cane"),
         text: T(
-          "Careful! Copying a variable copies the **arrow**, not the dog. Watch what happens to `a` when we change `b`.",
-          "¡Atención! Copiar una variable copia la **flecha**, no el perro. Mira qué le pasa a `a` cuando cambiamos `b`.",
-          "Attenzione! Copiare una variabile copia la **freccia**, non il cane. Guarda cosa succede ad `a` quando cambiamo `b`."
+          "Careful! Copying a variable copies the **reference**, not the dog. Watch what happens to `a` when we change `b`.",
+          "¡Atención! Copiar una variable copia la **referencia**, no el perro. Mira qué le pasa a `a` cuando cambiamos `b`.",
+          "Attenzione! Copiare una variabile copia il **riferimento**, non il cane. Guarda cosa succede ad `a` quando cambiamo `b`."
         ),
         code: "Dog a = new Dog(\"Rex\", 3);\nDog b = a;\nb.age = 4;\nSystem.out.println(a.age);",
         viz: {
           type: "memory",
           steps: [
-            { line: 1, note: T("One dog, one arrow.", "Un perro, una flecha.", "Un cane, una freccia."), frames: [main({ a: "@1" })], heap: [dog("@1", "\"Rex\"", "3")] },
-            { line: 2, note: T("`b = a` copies the arrow. Now both point to the **same** dog. No new dog!", "`b = a` copia la flecha. Ahora las dos apuntan al **mismo** perro. ¡Ningún perro nuevo!", "`b = a` copia la freccia. Ora tutte e due indicano lo **stesso** cane. Nessun cane nuovo!"), frames: [main({ a: "@1", b: "@1" })], heap: [dog("@1", "\"Rex\"", "3")] },
+            { line: 1, note: T("One dog, one reference.", "Un perro, una referencia.", "Un cane, un riferimento."), frames: [main({ a: "@1" })], heap: [dog("@1", "\"Rex\"", "3")] },
+            { line: 2, note: T("`b = a` copies the reference. Now both point to the **same** dog. No new dog!", "`b = a` copia la referencia. Ahora las dos apuntan al **mismo** perro. ¡Ningún perro nuevo!", "`b = a` copia il riferimento. Ora tutte e due indicano lo **stesso** cane. Nessun cane nuovo!"), frames: [main({ a: "@1", b: "@1" })], heap: [dog("@1", "\"Rex\"", "3")] },
             { line: 3, note: T("We change the age through `b`…", "Cambiamos la edad a través de `b`…", "Cambiamo l'età passando da `b`…"), frames: [main({ a: "@1", b: "@1" })], heap: [dog("@1", "\"Rex\"", "4")] },
             { line: 4, note: T("…and `a` sees 4 too, because it's the same dog.", "…y `a` también ve 4, porque es el mismo perro.", "…e anche `a` vede 4, perché è lo stesso cane."), frames: [main({ a: "@1", b: "@1" })], heap: [dog("@1", "\"Rex\"", "4")], out: ["4"] }
           ]
@@ -127,7 +127,7 @@
         code: "Dog a = new Dog(\"Rex\", 3);\nDog b = new Dog(\"Luna\", 5);\nDog c = a;",
         options: ["2", "3", "1"],
         answer: 0,
-        explain: T("Count the `new`: there are two. `c = a` only copies an arrow.", "Cuenta los `new`: hay dos. `c = a` solo copia una flecha.", "Conta i `new`: sono due. `c = a` copia solo una freccia.")
+        explain: T("Count the `new`: there are two. `c = a` only copies a reference.", "Cuenta los `new`: hay dos. `c = a` solo copia una referencia.", "Conta i `new`: sono due. `c = a` copia solo un riferimento.")
       },
       {
         id: "q4", type: "choice",
@@ -183,7 +183,7 @@
       },
       {
         id: "p5", type: "trace",
-        q: T("Follow the arrows. How much is each one worth when the program ends? Write the values in the boxes.", "Sigue las flechas. ¿Cuánto vale cada uno cuando termina el programa? Escribe los valores en las casillas.", "Segui le frecce. Quanto vale ognuno quando il programma finisce? Scrivi i valori nelle caselle."),
+        q: T("Follow the references. How much is each one worth when the program ends? Write the values in the boxes.", "Sigue las referencias. ¿Cuánto vale cada uno cuando termina el programa? Escribe los valores en las casillas.", "Segui i riferimenti. Quanto vale ognuno quando il programma finisce? Scrivi i valori nelle caselle."),
         code: "class Counter {\n    int count;\n    void add() { count = count + 1; }\n}\n\nCounter c = new Counter();\nc.add();\nc.add();\nCounter d = c;\nd.add();",
         rows: [
           { label: "`c.count`", answer: "3" },
@@ -211,10 +211,10 @@
     challenge: [
       {
         id: "c1", type: "predict",
-        q: T("Arrows on the move! What does this print? (Same `Dog` class.)", "¡Flechas en movimiento! ¿Qué imprime? (La misma clase `Dog`.)", "Frecce in movimento! Cosa stampa? (Stessa classe `Dog`.)"),
+        q: T("References on the move! What does this print? (Same `Dog` class.)", "¡Referencias en movimiento! ¿Qué imprime? (La misma clase `Dog`.)", "Riferimenti in movimento! Cosa stampa? (Stessa classe `Dog`.)"),
         code: "Dog a = new Dog(\"Rex\", 3);\nDog b = new Dog(\"Luna\", 5);\nDog c = a;\nc.name = \"Max\";\na = b;\nSystem.out.println(a.name);\nSystem.out.println(c.name);",
         answer: "Luna\nMax",
-        hint: T("Draw two boxes for the two dogs, then move the arrows line by line.", "Dibuja dos cajas para los dos perros y mueve las flechas línea a línea.", "Disegna due scatole per i due cani e sposta le frecce riga per riga."),
+        hint: T("Draw two boxes for the two dogs, then move the references (arrows) line by line.", "Dibuja dos cajas para los dos perros y mueve las referencias (flechas) línea a línea.", "Disegna due scatole per i due cani e sposta i riferimenti (le frecce) riga per riga."),
         explain: T("`c` and `a` start on Rex, who becomes Max. Then `a` moves to Luna. Max stays with `c`.", "`c` y `a` empiezan en Rex, que pasa a llamarse Max. Luego `a` pasa a Luna. Max se queda con `c`.", "`c` e `a` partono da Rex, che diventa Max. Poi `a` passa a Luna. Max resta con `c`.")
       },
       {

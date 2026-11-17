@@ -21,7 +21,7 @@
   /* ---------- interface text (3 languages) ---------- */
   var UI = {
     en: {
-      missionN: "Mission {n}", w_ifWall: "if there's a wall ahead", w_ifPath: "if the way ahead is clear", w_until: "repeat until the flag", res_loop: "Bit keeps going and never reaches the flag. Check what's inside the loop.", roadN: "Road {n}", sameProgram: "One program for all the roads: it must work on each of them.", orderProg: "Your program · click a piece to take it out", orderPieces: "Pieces · click a piece to add it to the program", orderIn: "Add to the program", orderOut: "Take out of the program", lineHint: "Not yet: the values are right, but with println, unlike print, the program prints on a new line.", markedWrong: "Not yet: check the parts marked with ✗.", caseHint: "Remember: words must be written exactly as expected, capital and small letters included.", newPart: "New part for your robot", parts: "Robot parts", partsHow: "Every mission you complete adds a part to your robot.", partFrom: "{l} · mission {n}", medalsHow: "Medals give you extra experience.", xpExp: "Experience", nextTitle: "Next mission", demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "The arrow **→** means: this variable points to that object (same colour).", worldN: "Level {n}", nextCard: "Next step", lockedWorld: "Finish {w} to unlock this level, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Missions",
+      missionN: "Mission {n}", guestQ: "No account yet?", guestText: "Try the first {n} missions of every level for free, without logging in.", guestBtn: "Try without an account", guestBarTitle: "Trial mode", guestBarText: "You can play the first {n} missions of every level. Your progress stays on this device. To unlock all the missions and save your progress, log in with the code your teacher gives you.", guestLogin: "Log in", guestLocked: "Log in to play", w_ifWall: "if there's a wall ahead", w_ifPath: "if the way ahead is clear", w_until: "repeat until the flag", res_loop: "Bit keeps going and never reaches the flag. Check what's inside the loop.", roadN: "Road {n}", sameProgram: "One program for all the roads: it must work on each of them.", orderProg: "Your program · click a piece to take it out", orderPieces: "Pieces · click a piece to add it to the program", orderIn: "Add to the program", orderOut: "Take out of the program", lineHint: "Not yet: the values are right, but with println, unlike print, the program prints on a new line.", markedWrong: "Not yet: check the parts marked with ✗.", caseHint: "Remember: words must be written exactly as expected, capital and small letters included.", newPart: "New part for your robot", parts: "Robot parts", partsHow: "Every mission you complete adds a part to your robot.", partFrom: "{l} · mission {n}", medalsHow: "Medals give you extra experience.", xpExp: "Experience", nextTitle: "Next mission", demoProgram: "Example program: press Play to watch it", loginTitle: "Enter your area", loginText: "Your teacher gave you a nickname and a secret code.", loginCode: "Secret code", loginShow: "Show code", loginBtn: "Enter", loginHelp: "Lost your code? Ask your teacher.", teacherLink: "I'm the teacher →", logout: "Log out", logoutTitle: "Leave", logoutText: "Your progress is saved. Log out if someone else uses this device.", badLogin: "Nickname or code not right. Check them and try again.", tooMany: "Too many tries. Wait a few minutes and try again.", network: "No connection. Check the internet and try again.", generic: "Something went wrong. Try again.", notActive: "This account is not active. Ask your teacher.", loadingTxt: "Loading…", nickFixed: "Your teacher chose your nickname.", resetTextCloud: "Deletes all your progress, on every device.", memArrow: "The arrow **→** is a **reference**: this variable points to that object (same colour).", worldN: "Level {n}", nextCard: "Next step", lockedWorld: "Finish {w} to unlock this level, or take the level test.", startHere: "Start here!", starsLabel: "Stars", levelsDone: "Missions",
       yourRobot: "Your robot", memStart: "Ready! The program hasn't started yet. Press **Next line ▶** to run the first line.", memNext: "Next line", memMain: "Program", memTemp: "temporary: they disappear at the end", memNoVars: "no variables yet", memOut: "What the program prints",
       starsText: "{n} of 3 stars", starsHow: "1 star: finish the mission. 2 stars: without using “Show the answer”. 3 stars: beat the boss with no mistakes and no hints.", placeUnlocked: "Unlocked levels",
       run: "Run ▶", play: "Play", clear: "Clear", blocksLabel: "Blocks: tap to add", dropMain: "Tap a block above to start", dropInside: "Tap a block to put it inside", addHere: "New blocks go here",
@@ -60,7 +60,7 @@
       modulesCount: "{n} missions", ofTotal: "{a} of {b}"
     },
     es: {
-      missionN: "Misión {n}", w_ifWall: "si hay una pared delante", w_ifPath: "si el camino está libre", w_until: "repetir hasta la bandera", res_loop: "Bit sigue y sigue y nunca llega a la bandera. Revisa lo que hay dentro del bucle.", roadN: "Camino {n}", sameProgram: "Un solo programa para todos los caminos: tiene que funcionar en cada uno.", orderProg: "Tu programa · haz clic en una pieza para quitarla", orderPieces: "Piezas · haz clic en una pieza para añadirla al programa", orderIn: "Añadir al programa", orderOut: "Quitar del programa", lineHint: "Todavía no: los valores son correctos, pero con println, a diferencia de print, el programa escribe en una línea nueva.", markedWrong: "Todavía no: revisa las partes marcadas con ✗.", caseHint: "Recuerda: las palabras se escriben exactamente como se espera, distinguiendo mayúsculas y minúsculas.", newPart: "Pieza nueva para tu robot", parts: "Piezas del robot", partsHow: "Cada misión que completas añade una pieza a tu robot.", partFrom: "{l} · misión {n}", medalsHow: "Las medallas te dan experiencia extra.", xpExp: "Experiencia", nextTitle: "Próxima misión", demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "La flecha **→** significa: esta variable apunta a ese objeto (mismo color).", worldN: "Nivel {n}", nextCard: "Siguiente paso", lockedWorld: "Termina {w} para desbloquear este nivel, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Misiones",
+      missionN: "Misión {n}", guestQ: "¿Todavía no tienes cuenta?", guestText: "Prueba gratis las primeras {n} misiones de cada nivel, sin entrar.", guestBtn: "Probar sin cuenta", guestBarTitle: "Modo prueba", guestBarText: "Puedes jugar las primeras {n} misiones de cada nivel. Tu progreso se queda en este dispositivo. Para desbloquear todas las misiones y guardar tu progreso, entra con el código que te da tu profe.", guestLogin: "Entrar", guestLocked: "Entra para jugar", w_ifWall: "si hay una pared delante", w_ifPath: "si el camino está libre", w_until: "repetir hasta la bandera", res_loop: "Bit sigue y sigue y nunca llega a la bandera. Revisa lo que hay dentro del bucle.", roadN: "Camino {n}", sameProgram: "Un solo programa para todos los caminos: tiene que funcionar en cada uno.", orderProg: "Tu programa · haz clic en una pieza para quitarla", orderPieces: "Piezas · haz clic en una pieza para añadirla al programa", orderIn: "Añadir al programa", orderOut: "Quitar del programa", lineHint: "Todavía no: los valores son correctos, pero con println, a diferencia de print, el programa escribe en una línea nueva.", markedWrong: "Todavía no: revisa las partes marcadas con ✗.", caseHint: "Recuerda: las palabras se escriben exactamente como se espera, distinguiendo mayúsculas y minúsculas.", newPart: "Pieza nueva para tu robot", parts: "Piezas del robot", partsHow: "Cada misión que completas añade una pieza a tu robot.", partFrom: "{l} · misión {n}", medalsHow: "Las medallas te dan experiencia extra.", xpExp: "Experiencia", nextTitle: "Próxima misión", demoProgram: "Programa de ejemplo: pulsa Reproducir para verlo", loginTitle: "Entra en tu área", loginText: "Tu profe te ha dado un apodo y un código secreto.", loginCode: "Código secreto", loginShow: "Ver el código", loginBtn: "Entrar", loginHelp: "¿Has perdido el código? Pídeselo a tu profe.", teacherLink: "Soy el profe →", logout: "Salir", logoutTitle: "Salir", logoutText: "Tu progreso está guardado. Sal si otra persona usa este dispositivo.", badLogin: "El apodo o el código no son correctos. Revísalos y vuelve a intentarlo.", tooMany: "Demasiados intentos. Espera unos minutos y vuelve a intentarlo.", network: "No hay conexión. Revisa internet y vuelve a intentarlo.", generic: "Algo ha ido mal. Vuelve a intentarlo.", notActive: "Esta cuenta no está activa. Pregunta a tu profe.", loadingTxt: "Cargando…", nickFixed: "Tu apodo lo elige tu profe.", resetTextCloud: "Borra todo tu progreso, en todos los dispositivos.", memArrow: "La flecha **→** es una **referencia**: esta variable apunta a ese objeto (mismo color).", worldN: "Nivel {n}", nextCard: "Siguiente paso", lockedWorld: "Termina {w} para desbloquear este nivel, o haz el test de nivel.", startHere: "¡Empieza aquí!", starsLabel: "Estrellas", levelsDone: "Misiones",
       yourRobot: "Tu robot", memStart: "¡Listo! El programa todavía no ha empezado. Pulsa **Siguiente línea ▶** para ejecutar la primera línea.", memNext: "Siguiente línea", memMain: "Programa", memTemp: "temporales: desaparecen al final", memNoVars: "aún no hay variables", memOut: "Lo que imprime el programa",
       starsText: "{n} de 3 estrellas", starsHow: "1 estrella: terminas la misión. 2 estrellas: sin usar “Ver la respuesta”. 3 estrellas: vences al jefe sin errores ni pistas.", placeUnlocked: "Niveles desbloqueados",
       run: "Ejecutar ▶", play: "Reproducir", clear: "Borrar todo", blocksLabel: "Bloques: toca para añadir", dropMain: "Toca un bloque de arriba para empezar", dropInside: "Toca un bloque para meterlo dentro", addHere: "Los bloques nuevos van aquí",
@@ -99,7 +99,7 @@
       modulesCount: "{n} misiones", ofTotal: "{a} de {b}"
     },
     it: {
-      missionN: "Missione {n}", w_ifWall: "se c'è un muro davanti", w_ifPath: "se la strada è libera", w_until: "ripeti fino alla bandiera", res_loop: "Bit continua a girare e non arriva mai alla bandiera. Controlla cosa c'è dentro il ciclo.", roadN: "Strada {n}", sameProgram: "Un solo programma per tutte le strade: deve funzionare su ognuna.", orderProg: "Il tuo programma · clicca un pezzo per toglierlo", orderPieces: "Pezzi · clicca un pezzo per aggiungerlo al programma", orderIn: "Aggiungi al programma", orderOut: "Togli dal programma", lineHint: "Non ancora: i valori sono giusti, ma con println, invece di print, il programma stampa su una riga nuova.", markedWrong: "Non ancora: rivedi le parti segnate con ✗.", caseHint: "Ricorda: le parole vanno scritte esattamente come previsto, distinguendo maiuscole e minuscole.", newPart: "Nuovo pezzo per il tuo robot", parts: "Pezzi del robot", partsHow: "Ogni missione completata aggiunge un pezzo al tuo robot.", partFrom: "{l} · missione {n}", medalsHow: "Le medaglie ti danno esperienza in più.", xpExp: "Esperienza", nextTitle: "Prossima missione", demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "La freccia **→** vuol dire: questa variabile indica quell'oggetto (stesso colore).", worldN: "Livello {n}", nextCard: "Prossimo passo", lockedWorld: "Completa {w} per sbloccare questo livello, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Missioni",
+      missionN: "Missione {n}", guestQ: "Non hai ancora un account?", guestText: "Prova gratis le prime {n} missioni di ogni livello, senza accedere.", guestBtn: "Prova senza account", guestBarTitle: "Modalità prova", guestBarText: "Puoi giocare le prime {n} missioni di ogni livello. I progressi restano su questo dispositivo. Per sbloccare tutte le missioni e salvare i progressi, accedi con il codice che ti dà l'insegnante.", guestLogin: "Accedi", guestLocked: "Accedi per giocare", w_ifWall: "se c'è un muro davanti", w_ifPath: "se la strada è libera", w_until: "ripeti fino alla bandiera", res_loop: "Bit continua a girare e non arriva mai alla bandiera. Controlla cosa c'è dentro il ciclo.", roadN: "Strada {n}", sameProgram: "Un solo programma per tutte le strade: deve funzionare su ognuna.", orderProg: "Il tuo programma · clicca un pezzo per toglierlo", orderPieces: "Pezzi · clicca un pezzo per aggiungerlo al programma", orderIn: "Aggiungi al programma", orderOut: "Togli dal programma", lineHint: "Non ancora: i valori sono giusti, ma con println, invece di print, il programma stampa su una riga nuova.", markedWrong: "Non ancora: rivedi le parti segnate con ✗.", caseHint: "Ricorda: le parole vanno scritte esattamente come previsto, distinguendo maiuscole e minuscole.", newPart: "Nuovo pezzo per il tuo robot", parts: "Pezzi del robot", partsHow: "Ogni missione completata aggiunge un pezzo al tuo robot.", partFrom: "{l} · missione {n}", medalsHow: "Le medaglie ti danno esperienza in più.", xpExp: "Esperienza", nextTitle: "Prossima missione", demoProgram: "Programma di esempio: premi Avvia per vederlo", loginTitle: "Entra nella tua area", loginText: "Il tuo insegnante ti ha dato un nickname e un codice segreto.", loginCode: "Codice segreto", loginShow: "Mostra il codice", loginBtn: "Entra", loginHelp: "Hai perso il codice? Chiedilo al tuo insegnante.", teacherLink: "Sono l'insegnante →", logout: "Esci", logoutTitle: "Esci", logoutText: "I tuoi progressi sono salvati. Esci se qualcun altro usa questo dispositivo.", badLogin: "Nickname o codice non giusti. Controllali e riprova.", tooMany: "Troppi tentativi. Aspetta qualche minuto e riprova.", network: "Nessuna connessione. Controlla internet e riprova.", generic: "Qualcosa è andato storto. Riprova.", notActive: "Questo account non è attivo. Chiedi al tuo insegnante.", loadingTxt: "Caricamento…", nickFixed: "Il nickname lo sceglie il tuo insegnante.", resetTextCloud: "Cancella tutti i tuoi progressi, su tutti i dispositivi.", memArrow: "La freccia **→** è un **riferimento**: questa variabile indica quell'oggetto (stesso colore).", worldN: "Livello {n}", nextCard: "Prossimo passo", lockedWorld: "Completa {w} per sbloccare questo livello, oppure fai il test di livello.", startHere: "Inizia qui!", starsLabel: "Stelle", levelsDone: "Missioni",
       yourRobot: "Il tuo robot", memStart: "Pronti! Il programma non è ancora partito. Premi **Riga successiva ▶** per eseguire la prima riga.", memNext: "Riga successiva", memMain: "Programma", memTemp: "temporanee: spariscono alla fine", memNoVars: "ancora nessuna variabile", memOut: "Cosa stampa il programma",
       starsText: "{n} stelle su 3", starsHow: "1 stella: completi la missione. 2 stelle: senza usare “Mostra la risposta”. 3 stelle: batti il boss senza errori né suggerimenti.", placeUnlocked: "Livelli sbloccati",
       run: "Esegui ▶", play: "Avvia", clear: "Cancella tutto", blocksLabel: "Blocchi: tocca per aggiungere", dropMain: "Tocca un blocco qui sopra per iniziare", dropInside: "Tocca un blocco per metterlo dentro", addHere: "I nuovi blocchi vanno qui",
@@ -158,9 +158,30 @@
   /* cloud mode (student accounts): see cloud.js and firebase-config.js */
   var cloud = window.MGCloud && MGCloud.enabled ? MGCloud : null;
   var cloudUid = null, cloudReady = !cloud, cloudTimer = null, loginError = "";
+  /* Trial (guest) mode, only when accounts are on: no login, the first GUEST_MAX missions
+     of every level, progress kept in this browser under its own key. */
+  var GUEST_KEY = "migame-learn-guest", GUEST_MAX = 2;
+  var guest = false;
+  function guestWanted() {
+    if (/[?&]prova\b|[?&]trial\b|[?&]prueba\b/.test(location.search)) return true;
+    try { return sessionStorage.getItem("migame-guest") === "1"; } catch (e) { return false; }
+  }
+  function startGuest() {
+    guest = true;
+    try { sessionStorage.setItem("migame-guest", "1"); } catch (e) {}
+    S = fresh();
+    try { var raw = localStorage.getItem(GUEST_KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch (e) {}
+    S.lang = detectLang();
+    ui = { mod: null, sec: "learn", slide: 0, idx: 0 };
+  }
+  function stopGuest() {
+    guest = false;
+    try { sessionStorage.removeItem("migame-guest"); } catch (e) {}
+    S = fresh();
+  }
   function save() {
     if (cloudUid) { clearTimeout(cloudTimer); cloudTimer = setTimeout(pushCloud, 1200); return; }
-    try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {}
+    try { localStorage.setItem(guest ? GUEST_KEY : KEY, JSON.stringify(S)); } catch (e) {}
   }
   function pushCloud() {
     if (!cloudUid) return;
@@ -388,12 +409,20 @@
     if (sectionItems(m, "challenge").every(function (it) { var r = S.items[itemKey(m, it)]; return r && r.perfect; })) n++;
     return n;
   }
+  function guestOpen(id) {
+    var si = stageOf(id);
+    if (si < 0) return false;
+    var idx = MG.stages[si].modules.map(function (e) { return e.id; }).indexOf(id);
+    return idx >= 0 && idx < GUEST_MAX && !!MG.modules[id];
+  }
   function stageUnlocked(i) {
+    if (guest) return true;
     if (i <= 0) return true;
     if (S.placement && S.placement.stage >= i) return true;
     return stageUnlocked(i - 1) && stageComplete(i - 1);
   }
   function moduleUnlocked(id) {
+    if (guest) return guestOpen(id);
     var si = stageOf(id);
     if (si < 0 || !stageUnlocked(si)) return false;
     /* worlds below the level test result: every level is open, in any order */
@@ -450,7 +479,7 @@
     if (!topbar) return;
     MGSite.header(topbar, {
       root: "../", active: "learn",
-      extra: (cloud && !cloudUid) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("xpExp")) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
+      extra: (cloud && !cloudUid && !guest) ? "" : '<a class="chip-xp" href="#profile" title="' + esc(t("xpExp")) + '"><span class="coin">★</span>' + S.xp + " XP</a>" +
         '<a class="avatar" href="#profile" aria-label="' + esc(t("profile")) + '">' + robotSvg() + "</a>"
     });
   }
@@ -489,6 +518,12 @@
     if (MG.placement) pl.appendChild(btn(esc(S.placement ? t("placementRetake") : t("placementBtn")), "btn-ghost", function () { location.hash = "placement"; }));
     wrap.appendChild(pl);
 
+    if (guest) {
+      var gb = h("div", "card guest-bar");
+      gb.innerHTML = "<div><b>" + esc(t("guestBarTitle")) + "</b><p>" + esc(t("guestBarText", { n: GUEST_MAX })) + "</p></div>";
+      gb.appendChild(btn(esc(t("guestLogin")), "btn-primary", function () { stopGuest(); location.hash = "home"; render(); }));
+      wrap.insertBefore(gb, wrap.firstChild);
+    }
     var ws = h("div", "worlds");
     MG.stages.forEach(function (st, i) {
       var open = stageUnlocked(i), complete = stageComplete(i);
@@ -526,7 +561,7 @@
       if (avail) el.href = "#m-" + m.id;
       el.style.left = p.x + "%";
       el.style.top = p.y + "px";
-      var sub = !m ? t("soon") : !avail ? t("locked") : moduleProgress(m) ? t("inProgress", { p: moduleProgress(m) }) : t("startHere");
+      var sub = !m ? t("soon") : !avail ? t(guest ? "guestLocked" : "locked") : moduleProgress(m) ? t("inProgress", { p: moduleProgress(m) }) : t("startHere");
       el.innerHTML = (avail && target === m ? '<span class="here">' + robotSvg() + "</span>" : "") +
         '<span class="lvl-btn">' + (m && !avail ? LOCK : esc(code)) + "</span>" +
         '<span class="lvl-name">' + esc(tr(m ? m.title : e.title)) + "</span>" +
@@ -731,7 +766,9 @@
     var nx = nextModuleAfter(m);
     if (nx) row.appendChild(btn(esc(t("nextModule") + ": " + tr(nx.title)), "btn-primary btn-big", function () { location.hash = "m-" + nx.id; }));
     row.appendChild(btn(esc(t("backMap")), nx ? "btn-ghost" : "btn-primary btn-big", function () { location.hash = "home"; render(); }));
+    if (guest && !nx) row.appendChild(btn(esc(t("guestLogin")), "btn-sun", function () { stopGuest(); location.hash = "home"; render(); }));
     p.appendChild(row);
+    if (guest && !nx) p.appendChild(h("p", "muted", esc(t("guestBarText", { n: GUEST_MAX }))));
     w.appendChild(p);
     main.appendChild(w);
     renderTopbar();
@@ -1605,6 +1642,12 @@
     right.appendChild(hc);
 
     var rc = h("div", "card");
+    if (guest) {
+      var gc = h("div", "card");
+      gc.innerHTML = "<h2>" + esc(t("guestBarTitle")) + '</h2><p class="muted" style="margin-top:0">' + esc(t("guestBarText", { n: GUEST_MAX })) + "</p>";
+      gc.appendChild(btn(esc(t("guestLogin")), "btn-primary", function () { stopGuest(); location.hash = "home"; render(); }));
+      right.appendChild(gc);
+    }
     if (cloudUid) {
       var lc = h("div", "card");
       lc.innerHTML = "<h2>" + esc(t("logoutTitle")) + '</h2><p class="muted" style="margin-top:0">' + esc(t("logoutText")) + "</p>";
@@ -1646,8 +1689,11 @@
       '<label class="show-code"><input type="checkbox" id="lf-show"> ' + esc(t("loginShow")) + "</label></div>" +
       '<p class="login-err" role="alert"></p>' +
       '<button class="btn btn-primary btn-big" type="submit">' + esc(t("loginBtn")) + "</button></form>" +
-      '<p class="muted login-help">' + esc(t("loginHelp")) + '</p><a class="teacher-link" href="teacher.html">' + esc(t("teacherLink")) + "</a>";
+      '<p class="muted login-help">' + esc(t("loginHelp")) + "</p>" +
+      '<div class="guest-box"><p><b>' + esc(t("guestQ")) + "</b><br>" + esc(t("guestText", { n: GUEST_MAX })) + '</p><button type="button" class="btn btn-sun guest-go">' + esc(t("guestBtn")) + "</button></div>" +
+      '<a class="teacher-link" href="teacher.html">' + esc(t("teacherLink")) + "</a>";
     var err = c.querySelector(".login-err"), form = c.querySelector("form"), go = form.querySelector("button");
+    c.querySelector(".guest-go").addEventListener("click", function () { startGuest(); location.hash = "home"; render(); });
     if (loginError) err.textContent = t(loginError);
     c.querySelector("#lf-show").addEventListener("change", function (e) { c.querySelector("#lf-code").type = e.target.checked ? "text" : "password"; });
     form.addEventListener("submit", function (e) {
@@ -1664,11 +1710,12 @@
   function startCloud() {
     cloud.onAuth(function (u) {
       if (!u) {
-        cloudUid = null; S = fresh(); cloudReady = true;
-        ui = { mod: null, sec: "learn", slide: 0, idx: 0 };
+        cloudUid = null; cloudReady = true;
+        if (guestWanted()) startGuest(); else { S = fresh(); ui = { mod: null, sec: "learn", slide: 0, idx: 0 }; }
         render();
         return;
       }
+      if (guest) { guest = false; try { sessionStorage.removeItem("migame-guest"); } catch (e) {} }
       cloudReady = false; render();
       cloud.loadMine().then(function (doc) {
         if (!doc) {
@@ -1705,7 +1752,7 @@
     var hash = (location.hash || "").replace(/^#/, "") || "home";
     var view;
     if (cloud && !cloudReady) view = h("p", "loading", esc(t("loadingTxt")));
-    else if (cloud && !cloudUid) view = viewLogin();
+    else if (cloud && !cloudUid && !guest) view = viewLogin();
     else if (hash === "profile") view = viewProfile();
     else if (hash === "placement") view = viewPlacement();
     else if (hash.indexOf("m-") === 0 && MG.modules[hash.slice(2)] && moduleUnlocked(hash.slice(2))) view = viewModule(MG.modules[hash.slice(2)]);

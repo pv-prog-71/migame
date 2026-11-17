@@ -196,7 +196,7 @@
           { label: "`a[0]`", answer: "99" },
           { label: "`x`", answer: "99" }
         ],
-        hint: T("A list is an object: `b = a` copies the **arrow**, not the boxes.", "Una lista es un objeto: `b = a` copia la **flecha**, no las cajas.", "Una lista è un oggetto: `b = a` copia la **freccia**, non le scatole."),
+        hint: T("A list is an object: `b = a` copies the **reference**, not the boxes.", "Una lista es un objeto: `b = a` copia la **referencia**, no las cajas.", "Una lista è un oggetto: `b = a` copia il **riferimento**, non le scatole."),
         explain: T("`a` and `b` point to the same list. Changing b[0] changes a[0] too. You'll meet this again with objects in the Inventor level.", "`a` y `b` apuntan a la misma lista. Cambiar b[0] cambia también a[0]. Lo volverás a ver con los objetos en el nivel Inventor.", "`a` e `b` indicano la stessa lista. Cambiare b[0] cambia anche a[0]. Lo ritroverai con gli oggetti nel livello Inventore.")
       }
     ]

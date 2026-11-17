@@ -446,3 +446,10 @@ main { padding-top: 34px; }
 .road-label { font-family: var(--f-display); font-weight: 800; font-size: var(--s-sm); color: var(--muted); }
 .roads-note { margin: 4px 0 0; font-weight: 700; }
 .obj-head .obj-cls { font-weight: 700; opacity: .8; font-size: .75em; margin-left: 6px; }
+
+/* v1.17 trial mode */
+.guest-box { margin-top: 18px; padding: 16px; border-radius: 16px; background: var(--sun-soft, #fff4c7); border: 2px solid var(--line); display: grid; gap: 10px; justify-items: start; }
+.guest-box p { margin: 0; }
+.guest-bar { display: flex; gap: 14px 20px; align-items: center; flex-wrap: wrap; justify-content: space-between; background: var(--sun-soft, #fff4c7); grid-column: 1 / -1; }
+.guest-bar > div { flex: 1 1 280px; min-width: 0; }
+.guest-bar p { margin: 4px 0 0; }
