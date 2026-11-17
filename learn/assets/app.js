@@ -848,9 +848,15 @@
       ta.placeholder = t("typeOutput");
       ta.spellcheck = false;
       ta.setAttribute("autocapitalize", "off");
+      ta.setAttribute("autocorrect", "off"); ta.setAttribute("autocomplete", "off");
       ta.setAttribute("aria-label", t("typeOutput"));
       body.appendChild(ta);
-      function norm(s) { return String(s).replace(/\r/g, "").split("\n").map(function (l) { return l.replace(/\s+$/, ""); }).join("\n").trim(); }
+      /* tolerant compare: spaces at the start/end of a line, double spaces and empty lines don't count */
+      function norm(s) {
+        return String(s).replace(/\r/g, "").replace(/\u00a0/g, " ").split("\n")
+          .map(function (l) { return l.trim().replace(/[ \t]+/g, " "); })
+          .filter(function (l) { return l !== ""; }).join("\n");
+      }
       return {
         check: function () {
           if (!ta.value.trim()) return null;
