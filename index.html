@@ -134,7 +134,9 @@
       .wcard:nth-child(2), .wcard:nth-child(3) { margin-left: 0; }
     }
     @media (max-width: 720px) {
-      .bubble { margin: -16px 0 0 3%; font-size: clamp(29px, 8vw, 44px); }
+      /* phone: bigger pixel line (11 letters fill the width) and less overlap from the second line */
+      .pixel { font-size: min(8.3vw, 46px); line-height: 1.3; text-shadow: 3px 3px 0 var(--teal), 5px 5px 0 #d2f5f4; }
+      .bubble { margin: -4px 0 0 3%; font-size: clamp(29px, 8vw, 44px); }
       .tagline { letter-spacing: 0; margin: 22px auto; }
       .demo { grid-template-columns: minmax(0, 1fr) 60px minmax(0, 1fr); gap: 6px; }
       .scratch, .python { width: 100%; }

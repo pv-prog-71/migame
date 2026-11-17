@@ -17,12 +17,12 @@
   var SHOW_LEARN = true;
 
   /* Site version: kept in the footer data-version attribute. Keep it equal to the VERSION file. */
-  var VERSION = "1.11";
+  var VERSION = "1.12";
 
   var NAV = {
-    it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni online individuali di programmazione per bambini." },
-    es: { lessons: "Las clases", how: "Cómo funciona", play: "Juega y aprende", contact: "Contacto", menu: "Menú", lang: "Idioma", foot: "Clases individuales online de programación para niños." },
-    en: { lessons: "Lessons", how: "How it works", play: "Play & learn", contact: "Contact", menu: "Menu", lang: "Language", foot: "One-to-one online coding lessons for children." }
+    it: { lessons: "Le lezioni", how: "Come funziona", play: "Gioca e impara", contact: "Contatti", menu: "Menu", lang: "Lingua", foot: "Lezioni individuali online di iniziazione alla programmazione per bambini e principianti." },
+    es: { lessons: "Las clases", how: "Cómo funciona", play: "Juega y aprende", contact: "Contacto", menu: "Menú", lang: "Idioma", foot: "Clases individuales online de iniciación a la programación para niños y principiantes." },
+    en: { lessons: "Lessons", how: "How it works", play: "Play & learn", contact: "Contact", menu: "Menu", lang: "Language", foot: "One-to-one online lessons introducing programming to children and beginners." }
   };
 
   /* Bit, the mascot / the player's robot.
